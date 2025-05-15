@@ -4,9 +4,8 @@ import Button from '../../components/Button.astro';
 import SectionTitle from '../../components/SectionTitle.astro';
 import Card from '../../components/Card.astro';
 
-
-// Dalam proyek nyata, data ini akan diambil dari CMS atau database
-// Untuk contoh, kita gunakan data statis
+// In a real project, this data would be fetched from a CMS or database
+// For this example, we use static data
 const articles = [
   {
     slug: 'transformasi-digital',
@@ -75,20 +74,19 @@ const articles = [
   }
 ];
 
-// Mendapatkan artikel berdasarkan slug
+// Get article by slug
 const { slug } = Astro.params;
 const article = articles.find(article => article.slug === slug);
 
-let articleContent;
+// Get related articles (exclude current article)
+const relatedArticles = articles.filter(a => a.slug !== slug).slice(0, 3);
 
-// Jika artikel tidak ditemukan, redirect ke halaman 404
+// If article not found, redirect to 404
 if (!article) {
-  articleContent = Astro.redirect('/404');
-} else {
-  // Mendapatkan artikel terkait (exclude artikel saat ini)
-  const relatedArticles = articles.filter(a => a.slug !== slug).slice(0, 3);
-  articleContent =  `---
-
+  Astro.redirect('/404');
+  return;
+}
+---
 
 <MainLayout title={article.title}>
   <!-- Hero Section -->
@@ -219,7 +217,3 @@ if (!article) {
     </div>
   </section>
 </MainLayout>
-`;
-
-  return articleContent;
-}

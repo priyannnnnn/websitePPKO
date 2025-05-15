@@ -1,6 +1,9 @@
-// astro.config.mjs
 import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
+// https://astro.build/config
 export default defineConfig({
-  // Tidak perlu konfigurasi khusus di sini
+  integrations: [tailwind()],
+  // Enable SSR for Vercel deployment
+  output: 'server'
 });
