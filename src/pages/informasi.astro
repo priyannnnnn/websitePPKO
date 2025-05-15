@@ -3,6 +3,7 @@ import MainLayout from '../layouts/MainLayout.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import Button from '../components/Button.astro';
 import Card from '../components/Card.astro';
+import { articles } from './informasi/[slug].astro';
 ---
 
 <MainLayout title="Informasi">
@@ -103,41 +104,32 @@ import Card from '../components/Card.astro';
       />
       
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-        <Card
-          title="Peresmian Fasilitas Factory Sharing"
-          description="Fasilitas baru untuk pengolahan susu diresmikan dengan kehadiran pejabat daerah dan mitra industri."
-          image="/placeholder.svg?height=400&width=600"
-          href="/informasi/peresmian-fasilitas"
-        />
-        <Card
-          title="Pelatihan Standarisasi Produksi"
-          description="Pelaku usaha di Desa Purwobinangun mengikuti pelatihan standarisasi produksi olahan susu."
-          image="/placeholder.svg?height=400&width=600"
-          href="/informasi/pelatihan-standarisasi"
-        />
-        <Card
-          title="Peluncuran Platform Digital"
-          description="Platform digital untuk pemasaran produk olahan susu Desa Purwobinangun resmi diluncurkan."
-          image="/placeholder.svg?height=400&width=600"
-          href="/informasi/peluncuran-platform"
-        />
+        {articles.map(article => (
+          <Card
+            title={article.title}
+            description={article.description}
+            image={article.image}
+            href={`/informasi/${article.slug}`}
+          />
+        ))}
+        
         <Card
           title="Kunjungan Industri ke Desa Purwobinangun"
           description="Beberapa industri besar mengunjungi Desa Purwobinangun untuk melihat potensi kerjasama."
           image="/placeholder.svg?height=400&width=600"
-          href="/informasi/kunjungan-industri"
+          href="#"
         />
         <Card
           title="Inovasi Produk Olahan Susu"
           description="Tim PPKO dan masyarakat desa mengembangkan beberapa inovasi produk olahan susu baru."
           image="/placeholder.svg?height=400&width=600"
-          href="/informasi/inovasi-produk"
+          href="#"
         />
         <Card
           title="Peningkatan Kualitas Bahan Baku"
           description="Program peningkatan kualitas bahan baku susu melalui perbaikan manajemen peternakan."
           image="/placeholder.svg?height=400&width=600"
-          href="/informasi/peningkatan-kualitas"
+          href="#"
         />
       </div>
 

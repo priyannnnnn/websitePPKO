@@ -6,7 +6,7 @@ import Card from '../../components/Card.astro';
 
 // In a real project, this data would be fetched from a CMS or database
 // For this example, we use static data
-const articles = [
+export const articles = [
   {
     slug: 'transformasi-digital',
     title: 'Transformasi Digital Desa Purwobinangun Melalui Program PPKO',
@@ -74,18 +74,19 @@ const articles = [
   }
 ];
 
-// Get article by slug
-const { slug } = Astro.params;
-const article = articles.find(article => article.slug === slug);
+// This function is required for static site generation with dynamic routes
+export function getStaticPaths() {
+  return articles.map(article => ({
+    params: { slug: article.slug },
+    props: { article }
+  }));
+}
+
+// Get article from props (passed by getStaticPaths)
+const { article } = Astro.props;
 
 // Get related articles (exclude current article)
-const relatedArticles = articles.filter(a => a.slug !== slug).slice(0, 3);
-
-// If article not found, redirect to 404
-if (!article) {
-  Astro.redirect('/404');
-  return;
-}
+const relatedArticles = articles.filter(a => a.slug !== article.slug).slice(0, 3);
 ---
 
 <MainLayout title={article.title}>
