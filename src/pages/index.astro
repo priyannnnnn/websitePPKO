@@ -3,25 +3,30 @@ import MainLayout from '../layouts/MainLayout.astro';
 import Button from '../components/Button.astro';
 import SectionTitle from '../components/SectionTitle.astro';
 import Card from '../components/Card.astro';
+// import kegiatanImage from '../public/kegiatan.png';
+import { Image } from 'astro:assets';
+import kegiatanImage from '../assets/pur.jpeg';
 ---
 
 <MainLayout title="Rumah">
   <!-- Hero Section -->
-  <section class="relative bg-gradient-to-br from-blue-800 via-blue-700 to-green-600 text-white py-20 md:py-32">
+  <section class="relative text-white py-20 md:py-32">
     <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute inset-0 bg-blue-900 opacity-40"></div>
+      <div class="absolute inset-0 bg-black opacity-50"></div>
       <img 
-        src="/placeholder.svg?height=1080&width=1920" 
-        alt="Desa Purwobinangun" 
-        class="w-full h-full object-cover"
+        src={kegiatanImage.src || "/placeholder.svg"} 
+        alt="Desa Purwobinangun"
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+        decoding="async"
       />
     </div>
     <div class="container mx-auto px-4 relative z-10">
       <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-          Desa PURWOBINANGUN DAIRYPRENEUR
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          Desa Wirausaha PURWOBINANGUN 
         </h1>
-        <p class="text-xl md:text-2xl mb-8 text-blue-100">
+        <p class="text-xl md:text-2xl mb-8 text-white">
           Penguatan Desa Wirausaha melalui Sentra Olahan Susu Terstandar berbasis Factory Sharing dan Digitalisasi Bisnis
         </p>
         <div class="flex flex-wrap gap-4">
@@ -47,15 +52,15 @@ import Card from '../components/Card.astro';
   <section class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-4">
       <SectionTitle
-        title="Tentang Program PPKO"
-        subtitle="Program Penguatan Kapasitas Organisasi (PPKO) bertujuan untuk mengembangkan potensi desa melalui inovasi pengolahan susu."
+        title="Tentang Program PPK Ormawa"
+        subtitle="Program Penguatan Kapasitas Organisasi (PPK Ormawa) bertujuan untuk mengembangkan potensi desa melalui inovasi pengolahan susu."
         centered={true}
       />
       
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <img 
-            src="/placeholder.svg?height=600&width=800" 
+            src="/pemasaran-produk.jpg?height=600&width=800" 
             alt="Pengolahan Susu" 
             class="rounded-lg shadow-lg w-full"
           />
@@ -63,7 +68,7 @@ import Card from '../components/Card.astro';
         <div>
           <h3 class="text-2xl font-bold text-blue-700 mb-4">Mengapa Program Ini Penting?</h3>
           <p class="text-gray-700 mb-6">
-            Desa Purwobinangun memiliki potensi besar dalam produksi susu, namun masih terkendala dalam hal standarisasi produksi dan pemasaran. Program PPKO hadir untuk mengatasi tantangan tersebut melalui pendekatan Factory Sharing dan digitalisasi bisnis.
+            Desa Purwobinangun memiliki potensi besar dalam produksi susu, namun masih terkendala dalam hal standarisasi produksi dan pemasaran. Program PPK Ormawa hadir untuk mengatasi tantangan tersebut melalui pendekatan Factory Sharing dan digitalisasi bisnis.
           </p>
           <ul class="space-y-3 mb-8">
             <li class="flex items-start">
@@ -106,26 +111,26 @@ import Card from '../components/Card.astro';
     <div class="container mx-auto px-4">
       <SectionTitle
         title="Highlight Program"
-        subtitle="Beberapa pencapaian dan fokus utama dari program PPKO Desa Purwobinangun"
+        subtitle="Beberapa pencapaian dari program PPK Ormawa Desa Purwobinangun"
         centered={true}
       />
       
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <Card
           title="Factory Sharing"
-          description="Sistem berbagi fasilitas produksi yang memungkinkan pelaku usaha kecil mengakses peralatan standar industri."
+          description="Program ini hadir untuk menjawab tantangan keterbatasan alat dan biaya produksi UMKM olahan susu. Dengan konsep factory sharing, pelaku usaha dapat menggunakan fasilitas produksi bersama. Langkah ini mendorong efisiensi, kolaborasi, dan peningkatan kapasitas produksi lokal."
           image="/placeholder.svg?height=400&width=600"
           href="/luaran"
         />
         <Card
           title="Standarisasi Produksi"
-          description="Penerapan standar produksi pangan yang ketat untuk menjamin kualitas dan keamanan produk olahan susu."
+          description="Program ini mendorong percepatan pengurusan izin PIRT dan sertifikasi halal bagi produk olahan susu lokal. Upaya ini bertujuan menjamin legalitas, keamanan pangan, serta kehalalan produk. Dengan demikian, konsumen mendapatkan perlindungan dan kepastian atas kualitas produk yang dikonsumsi."
           image="/placeholder.svg?height=400&width=600"
           href="/luaran"
         />
         <Card
           title="Digitalisasi Bisnis"
-          description="Pengembangan platform digital untuk pemasaran produk dan pengelolaan bisnis yang lebih efisien."
+          description="Melalui pelatihan strategi promosi digital, program ini mendorong pemanfaatan marketplace dan media sosial. Tujuannya adalah meningkatkan daya saing produk lokal di pasar yang lebih luas. Dengan pendekatan ini, pelaku usaha dapat memperluas jangkauan dan menarik lebih banyak konsumen."
           image="/placeholder.svg?height=400&width=600"
           href="/luaran"
         />
@@ -134,12 +139,12 @@ import Card from '../components/Card.astro';
   </section>
 
   <!-- Latest News -->
-  <section class="py-16 md:py-24 bg-white">
+  <!-- <section class="py-16 md:py-24 bg-white">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center mb-12">
         <SectionTitle
           title="Berita Terbaru"
-          subtitle="Informasi terkini seputar program PPKO dan perkembangan Desa Purwobinangun"
+          subtitle="Informasi terkini seputar program PPK Ormawa dan perkembangan Desa Purwobinangun"
         />
         <Button
           text="Semua Artikel"
@@ -169,14 +174,14 @@ import Card from '../components/Card.astro';
         />
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- CTA Section -->
   <section class="py-16 md:py-24 bg-gradient-to-r from-blue-700 to-green-600 text-white">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6">Tertarik dengan Program PPKO?</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Tertarik dengan Program PPK Ormawa?</h2>
       <p class="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-        Pelajari lebih lanjut tentang program PPKO dan bagaimana Anda dapat terlibat dalam pengembangan Desa Purwobinangun.
+        Pelajari lebih lanjut tentang program PPK Ormawa dan bagaimana Anda dapat terlibat dalam pengembangan Desa Purwobinangun.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <Button 
