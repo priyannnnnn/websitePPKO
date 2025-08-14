@@ -1,0 +1,555 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Profile" description="Profile PPKO Ormawa Desa Purwobinangun - Tentang Kami, Visi Misi, Empat Pilar, Road Map, dan Struktur Organisasi">
+  <!-- Tentang Kami Section -->
+  <section class="relative min-h-screen parallax-bg" style="background-image: url('https://res.cloudinary.com/delcqotzz/image/upload/v1755152340/DSC02653_ouk4gg.jpg?height=800&width=1200');">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+    <div class="relative z-10 container mx-auto px-4 py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
+        <div class="text-white animate-on-scroll">
+          <h1 class="text-5xl md:text-6xl font-bold mb-6 text-amber-100">Tentang Kami</h1>
+          <div class="bg-black/40 backdrop-blur-sm rounded-lg p-8 border border-amber-200/20">
+            <p class="text-xl leading-relaxed mb-6 text-amber-50">
+              PPKO Ormawa Desa Purwobinangun adalah program inovatif yang berfokus pada penguatan desa wirausaha melalui pengembangan sentra olahan susu terstandar.
+            </p>
+            <p class="text-lg leading-relaxed mb-6 text-amber-100">
+              Kami menggabungkan konsep Factory Sharing dengan digitalisasi bisnis untuk menciptakan ekosistem kewirausahaan yang berkelanjutan di Desa Purwobinangun.
+            </p>
+            <p class="text-lg leading-relaxed text-amber-100">
+              Dengan semangat gotong royong dan inovasi, kami berkomitmen untuk memberdayakan masyarakat lokal dan mengangkat potensi ekonomi desa melalui produk olahan susu berkualitas tinggi.
+            </p>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-2 gap-4 animate-on-scroll">
+          <div class="space-y-4">
+            <img 
+              src="/placeholder.svg?height=300&width=250" 
+              alt="Aktivitas Peternakan Sapi" 
+              class="rounded-lg shadow-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <img 
+              src="/placeholder.svg?height=250&width=250" 
+              alt="Proses Pengolahan Susu" 
+              class="rounded-lg shadow-lg w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="space-y-4 mt-8">
+            <img 
+              src="/placeholder.svg?height=250&width=250" 
+              alt="Pelatihan Masyarakat" 
+              class="rounded-lg shadow-lg w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            <img 
+              src="/placeholder.svg?height=300&width=250" 
+              alt="Wirausaha Lokal" 
+              class="rounded-lg shadow-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visi & Misi Section -->
+  <section class="relative py-20 parallax-bg" style="background-image: url('/placeholder.svg?height=600&width=1200');">
+    <div class="absolute inset-0 bg-gradient-to-b from-emerald-900/80 to-teal-800/80"></div>
+    <div class="relative z-10 container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="text-white animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 text-emerald-100">Visi Kami</h2>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-emerald-200/30">
+            <p class="text-2xl font-semibold leading-relaxed text-emerald-50">
+              "Menjadi pusat unggulan pengembangan desa wirausaha berbasis olahan susu yang berkelanjutan dan berdaya saing global."
+            </p>
+          </div>
+        </div>
+        
+        <div class="text-white animate-on-scroll">
+          <h2 class="text-4xl md:text-5xl font-bold mb-8 text-teal-100">Misi Kami</h2>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-teal-200/30">
+            <ul class="space-y-4">
+              <li class="flex items-start fade-in-mission">
+                <div class="bg-teal-400 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                  <svg class="w-4 h-4 text-teal-900" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-lg">Mengembangkan sentra olahan susu terstandar dengan teknologi Factory Sharing</span>
+              </li>
+              <li class="flex items-start fade-in-mission">
+                <div class="bg-teal-400 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                  <svg class="w-4 h-4 text-teal-900" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-lg">Memberdayakan masyarakat desa melalui pelatihan kewirausahaan berkelanjutan</span>
+              </li>
+              <li class="flex items-start fade-in-mission">
+                <div class="bg-teal-400 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                  <svg class="w-4 h-4 text-teal-900" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-lg">Mengintegrasikan digitalisasi bisnis untuk meningkatkan daya saing produk</span>
+              </li>
+              <li class="flex items-start fade-in-mission">
+                <div class="bg-teal-400 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                  <svg class="w-4 h-4 text-teal-900" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-lg">Menciptakan jaringan kemitraan strategis untuk pengembangan pasar</span>
+              </li>
+              <li class="flex items-start fade-in-mission">
+                <div class="bg-teal-400 rounded-full p-2 mr-4 mt-1 flex-shrink-0">
+                  <svg class="w-4 h-4 text-teal-900" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <span class="text-lg">Membangun ekosistem ekonomi desa yang mandiri dan berkelanjutan</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Empat Pilar Section -->
+  <section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold text-orange-800 mb-6">Empat Pilar</h2>
+        <p class="text-xl text-orange-700 max-w-3xl mx-auto">
+          Fondasi utama program PPKO Ormawa Desa Purwobinangun yang menjadi kunci kesuksesan pengembangan desa wirausaha
+        </p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Pilar 1: Factory Sharing -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-orange-500 animate-on-scroll group">
+          <div class="text-center">
+            <div class="bg-orange-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-orange-200 transition-colors">
+              <svg class="w-10 h-10 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-orange-800 mb-4">Factory Sharing</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Konsep berbagi fasilitas produksi yang memungkinkan UMKM mengakses teknologi pengolahan susu modern dengan biaya terjangkau dan standar kualitas tinggi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pilar 2: Digitalisasi Bisnis -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-blue-500 animate-on-scroll group">
+          <div class="text-center">
+            <div class="bg-blue-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-200 transition-colors">
+              <svg class="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-blue-800 mb-4">Digitalisasi Bisnis</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Transformasi digital yang mengintegrasikan teknologi informasi dalam seluruh aspek bisnis, mulai dari produksi, pemasaran, hingga manajemen keuangan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pilar 3: Pemberdayaan Masyarakat -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-green-500 animate-on-scroll group">
+          <div class="text-center">
+            <div class="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-green-200 transition-colors">
+              <svg class="w-10 h-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-green-800 mb-4">Pemberdayaan Masyarakat</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Program pelatihan dan pendampingan komprehensif untuk meningkatkan kapasitas masyarakat dalam kewirausahaan dan pengelolaan bisnis berkelanjutan.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pilar 4: Kemitraan Strategis -->
+        <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-purple-500 animate-on-scroll group">
+          <div class="text-center">
+            <div class="bg-purple-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-200 transition-colors">
+              <svg class="w-10 h-10 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6m-8 0h8m0 0v-.5A1.5 1.5 0 019.5 4h5A1.5 1.5 0 0116 5.5V6m-8 0h8"></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-bold text-purple-800 mb-4">Kemitraan Strategis</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Jaringan kolaborasi dengan berbagai stakeholder termasuk pemerintah, akademisi, dan sektor swasta untuk memperkuat ekosistem bisnis desa.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Road Map Section -->
+  <section class="py-20 bg-blue-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold text-blue-800 mb-6">Road Map</h2>
+        <p class="text-2xl font-semibold text-blue-700 mb-4">Purwobinangun Dailypreneur</p>
+        <p class="text-xl text-blue-600 max-w-4xl mx-auto">
+          Road Map Juragan Perempuan Tani selama 4 tahun ke depan
+        </p>
+      </div>
+      
+      <div class="relative max-w-4xl mx-auto">
+        <!-- Central Timeline Line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gray-300"></div>
+        
+        <!-- 2025 Milestone -->
+        <div class="relative flex items-center mb-16 animate-on-scroll">
+          <div class="w-1/2 pr-8 text-right">
+            <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-red-500 hover:shadow-xl transition-shadow">
+              <div class="flex items-center justify-end mb-4">
+                <h3 class="text-2xl font-bold text-red-600 mr-3">2025</h3>
+                <div class="bg-red-500 rounded-full w-4 h-4"></div>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Fase Inisiasi:</strong> Pembentukan sentra olahan susu dengan fasilitas Factory Sharing pertama. Pelatihan dasar kewirausahaan untuk 50 perempuan tani dan peluncuran platform digital untuk pemasaran produk lokal.
+              </p>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 bg-red-500 rounded-full w-8 h-8 border-4 border-white shadow-lg flex items-center justify-center">
+            <div class="bg-white rounded-full w-3 h-3"></div>
+          </div>
+          <div class="w-1/2 pl-8"></div>
+        </div>
+        
+        <!-- 2026 Milestone -->
+        <div class="relative flex items-center mb-16 animate-on-scroll">
+          <div class="w-1/2 pr-8"></div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 bg-green-500 rounded-full w-8 h-8 border-4 border-white shadow-lg flex items-center justify-center">
+            <div class="bg-white rounded-full w-3 h-3"></div>
+          </div>
+          <div class="w-1/2 pl-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 border-r-4 border-green-500 hover:shadow-xl transition-shadow">
+              <div class="flex items-center mb-4">
+                <div class="bg-green-500 rounded-full w-4 h-4 mr-3"></div>
+                <h3 class="text-2xl font-bold text-green-600">2026</h3>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Fase Ekspansi:</strong> Perluasan jaringan ke 3 desa sekitar dengan 150 anggota aktif. Sertifikasi halal dan HACCP untuk semua produk. Implementasi sistem manajemen digital terintegrasi dan kemitraan dengan retailer regional.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- 2027 Milestone -->
+        <div class="relative flex items-center mb-16 animate-on-scroll">
+          <div class="w-1/2 pr-8 text-right">
+            <div class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-blue-500 hover:shadow-xl transition-shadow">
+              <div class="flex items-center justify-end mb-4">
+                <h3 class="text-2xl font-bold text-blue-600 mr-3">2027</h3>
+                <div class="bg-blue-500 rounded-full w-4 h-4"></div>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Fase Konsolidasi:</strong> Pembentukan koperasi dengan 300 anggota dan omzet Rp 2 miliar per tahun. Peluncuran brand nasional "Susu Purwobinangun" dan ekspor perdana ke negara ASEAN. Program magang untuk mahasiswa dan penelitian inovasi produk.
+              </p>
+            </div>
+          </div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 bg-blue-500 rounded-full w-8 h-8 border-4 border-white shadow-lg flex items-center justify-center">
+            <div class="bg-white rounded-full w-3 h-3"></div>
+          </div>
+          <div class="w-1/2 pl-8"></div>
+        </div>
+        
+        <!-- 2028 Milestone -->
+        <div class="relative flex items-center animate-on-scroll">
+          <div class="w-1/2 pr-8"></div>
+          <div class="absolute left-1/2 transform -translate-x-1/2 bg-purple-500 rounded-full w-8 h-8 border-4 border-white shadow-lg flex items-center justify-center">
+            <div class="bg-white rounded-full w-3 h-3"></div>
+          </div>
+          <div class="w-1/2 pl-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 border-r-4 border-purple-500 hover:shadow-xl transition-shadow">
+              <div class="flex items-center mb-4">
+                <div class="bg-purple-500 rounded-full w-4 h-4 mr-3"></div>
+                <h3 class="text-2xl font-bold text-purple-600">2028</h3>
+              </div>
+              <p class="text-gray-700 leading-relaxed">
+                <strong>Fase Sustainabilitas:</strong> Menjadi model desa wirausaha nasional dengan 500 anggota dan 10 produk unggulan. Pusat pelatihan kewirausahaan tingkat nasional, program CSR perusahaan, dan kontribusi 15% terhadap PDRB kabupaten dari sektor olahan susu.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Struktur Organisasi Section -->
+  <section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 animate-on-scroll">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Struktur Organisasi</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Tim profesional yang berdedikasi untuk mengembangkan program PPKO Ormawa Desa Purwobinangun
+        </p>
+      </div>
+
+      <!-- Ketua Section -->
+      <div class="mb-16 animate-on-scroll">
+        <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center">Ketua</h3>
+        <div class="flex justify-center">
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-blue-100 max-w-sm">
+            <div class="text-center">
+              <img 
+                src="https://res.cloudinary.com/delcqotzz/image/upload/v1755145270/ppkO_ivrzbl.png" 
+                alt="Putri Rahma Dwianggreini" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Putri Rahma Dwianggreini</h4>
+              <p class="text-blue-700 font-medium mb-1">Ketua</p>
+              <p class="text-gray-500 text-sm">Information Media Communication '21</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sekretaris & Bendahara Section -->
+      <div class="mb-16 animate-on-scroll">
+        <!-- <h3 class="text-3xl font-bold text-indigo-600 mb-8 text-center">Sekretaris & Bendahara</h3> -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-indigo-100">
+            <div class="text-center">
+              <img 
+                src="https://res.cloudinary.com/delcqotzz/image/upload/v1755149684/PPKOF_silio8.png" 
+                alt="Yustika Edho Wicaksono" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2 shadow-md">Yustika Edho Wicaksono</h4>
+              <p class="text-indigo-600 font-medium mb-1">Sekretaris</p>
+              <p class="text-gray-500 text-sm">Information Media Islamic Education '22</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-indigo-100">
+            <div class="text-center">
+              <img 
+                src="https://res.cloudinary.com/delcqotzz/image/upload/v1755147702/PPKOwilda_tkilmm.png" 
+                alt="Ali Hasan" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Ali Hasan</h4>
+              <p class="text-indigo-600 font-medium mb-1">Bendahara</p>
+              <p class="text-gray-500 text-sm">Logistics Chemical Engineering '21</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Acara Section -->
+      <div class="mb-16 animate-on-scroll">
+        <!-- <h3 class="text-3xl font-bold text-orange-600 mb-8 text-center">Divisi Acara</h3> -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-orange-100">
+            <div class="text-center">
+              <img 
+                src="https://res.cloudinary.com/delcqotzz/image/upload/v1755151217/PPKOCila_yqcmlv.png" 
+                alt="Saffanah Azka Mufida" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Saffanah Azka Mufida</h4>
+              <p class="text-orange-600 font-medium mb-1">Event Coordinator</p>
+              <p class="text-gray-500 text-sm">Chemical Engineering '21</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-orange-100">
+            <div class="text-center">
+              <img 
+                src="https://res.cloudinary.com/delcqotzz/image/upload/v1755151939/supriyann_lm8zko.png" 
+                alt="Salma Aliyah" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Salma Aliyah</h4>
+              <p class="text-orange-600 font-medium mb-1">Event Coordinator</p>
+              <p class="text-gray-500 text-sm">Psychology '23</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-orange-100">
+            <div class="text-center">
+              <img 
+                src="https://res.cloudinary.com/delcqotzz/image/upload/v1755151538/PPKOAska_c3qa4d.png" 
+                alt="M Hizbullah Furqon" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">M Hizbullah Furqon</h4>
+              <p class="text-orange-600 font-medium mb-1">Logistics</p>
+              <p class="text-gray-500 text-sm">Chemical Engineering '21</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Media Section -->
+      <div class="mb-16 animate-on-scroll">
+        <!-- <h3 class="text-3xl font-bold text-purple-600 mb-8 text-center">Divisi Media</h3> -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-purple-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Media Member 1" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Budi Santoso</h4>
+              <p class="text-purple-600 font-medium mb-1">Media</p>
+              <p class="text-gray-500 text-sm">Visual Communication Design 2021</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-purple-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Media Member 2" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Sari Indah</h4>
+              <p class="text-purple-600 font-medium mb-1">Media</p>
+              <p class="text-gray-500 text-sm">Visual Communication Design 2022</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-purple-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Media Member 3" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Eko Prasetyo</h4>
+              <p class="text-purple-600 font-medium mb-1">Media</p>
+              <p class="text-gray-500 text-sm">Informatika 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Humas Section -->
+      <div class="mb-16 animate-on-scroll">
+        <!-- <h3 class="text-3xl font-bold text-green-600 mb-8 text-center">Divisi Humas</h3> -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-green-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Humas Member 1" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Wilda Maharani</h4>
+              <p class="text-green-600 font-medium mb-1">Public Relations</p>
+              <p class="text-gray-500 text-sm">International Relations 2021</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-green-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Humas Member 2" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Dina Safitri</h4>
+              <p class="text-green-600 font-medium mb-1">Public Relations</p>
+              <p class="text-gray-500 text-sm">Communication & Media 2022</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-green-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Humas Member 3" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Rina Kusuma</h4>
+              <p class="text-green-600 font-medium mb-1">Public Relations</p>
+              <p class="text-gray-500 text-sm">International Relations 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Logistik Section -->
+      <div class="animate-on-scroll">
+        <h3 class="text-3xl font-bold text-amber-700 mb-8 text-center">Divisi Logistik</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-amber-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Logistics Member 1" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Ahmad Rizki</h4>
+              <p class="text-amber-700 font-medium mb-1">Logistics</p>
+              <p class="text-gray-500 text-sm">Industrial Engineering 2023</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-amber-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Logistics Member 2" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Rudi Hartono</h4>
+              <p class="text-amber-700 font-medium mb-1">Logistics</p>
+              <p class="text-gray-500 text-sm">Industrial Engineering 2022</p>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-amber-100">
+            <div class="text-center">
+              <img 
+                src="/placeholder.svg?height=240&width=200" 
+                alt="Logistics Member 3" 
+                class="w-40 h-48 rounded-lg mx-auto mb-4 object-cover shadow-md"
+              />
+              <h4 class="text-xl font-bold text-gray-800 mb-2">Fajar Nugroho</h4>
+              <p class="text-amber-700 font-medium mb-1">Logistics</p>
+              <p class="text-gray-500 text-sm">Industrial Engineering 2021</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-blue-700 via-teal-600 to-green-600 text-white">
+    <div class="container mx-auto px-4 text-center animate-on-scroll">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6">Bergabunglah dengan Kami</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
+        Mari bersama-sama membangun desa wirausaha yang berkelanjutan dan berdaya saing global melalui program PPKO Ormawa Desa Purwobinangun.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a 
+          href="/kemitraan" 
+          class="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          Pelajari Kemitraan
+        </a>
+        <a 
+          href="/produk" 
+          class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          Lihat Produk Kami
+        </a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
