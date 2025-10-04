@@ -2,203 +2,537 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Button from '../components/Button.astro';
 import SectionTitle from '../components/SectionTitle.astro';
-import Card from '../components/Card.astro';
-// import kegiatanImage from '../public/kegiatan.png';
-import { Image } from 'astro:assets';
-import kegiatanImage from '../assets/pur.jpeg';
 ---
 
-<MainLayout title="Rumah">
-  <!-- Hero Section -->
-  <section class="relative text-white py-20 md:py-32">
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute inset-0 bg-black opacity-50"></div>
-      <img 
-        src={kegiatanImage.src || "/placeholder.svg"} 
-        alt="Desa Purwobinangun"
-        class="w-full h-full object-cover object-center"
-        loading="eager"
-        decoding="async"
-      />
-    </div>
-    <div class="container mx-auto px-4 relative z-10">
-      <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-          Desa Wirausaha PURWOBINANGUN 
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 text-white">
-          Penguatan Desa Wirausaha melalui Sentra Olahan Susu Terstandar berbasis Factory Sharing dan Digitalisasi Bisnis
+<MainLayout title="Beranda">
+   <section class="relative text-white h-screen flex items-center justify-center">
+    Slideshow Container 
+   <div class="absolute inset-0 overflow-hidden">
+      Slide 1 
+     <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000">
+       <div class="absolute inset-0 bg-black/50"></div>
+       <img 
+         src="/beranda.jpg" 
+         alt="Perempuan Tani Purwobinagun"
+         class="w-full h-full object-cover"
+       />
+     </div>
+      Slide 2 
+     <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000">
+       <div class="absolute inset-0 bg-black/50"></div>
+       <img 
+         src="/beranda2.jpg" 
+         alt="Peternakan Sapi Perah"
+         class="w-full h-full object-cover"
+       />
+     </div>
+   </div>
+
+    Hero Content - Centered 
+   <div class="container mx-auto px-4 relative z-10 text-center">
+     <!-- <p class="text-blue-400 text-sm md:text-base font-semibold mb-4 tracking-widest uppercase">PROGRAM</p> -->
+     <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold mb-0 text-white leading-tight">
+      Desa Wirausaha Purwobinangun
+     </h1>
+     <!-- <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-4 text-white leading-tight">
+      Purwobinangun
+     </h1> -->
+     <p class="text-lg md:text-xl lg:text-3xl mb-6 text-blue-200 font-medium">
+       PPK Ormawa - Sinera
+     </p>
+     <p class="text-base md:text-lg mb-6 text-gray-200 max-w-4xl mx-auto leading-relaxed">
+      Penguatan Desa Wirausaha melalui Sentra Olahan Susu Terstandar berbasis Factory Sharing dan Digitalisasi Bisnis
+     </p>
+     <p class="text-sm md:text-base mb-8 text-gray-300 italic max-w-3xl mx-auto">
+       "Kemandirian desa lahir dari kolaborasi, kepedulian, dan semangat untuk maju bersama."
+     </p>
+     <Button 
+       text="Selengkapnya" 
+       href="/profile" 
+       variant="primary"
+       class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg"
+     />
+   </div>
+
+    Slideshow Indicators 
+   <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+     <button class="slide-indicator w-2 h-2 rounded-full bg-white opacity-100 transition-opacity" data-slide="0"></button>
+     <button class="slide-indicator w-2 h-2 rounded-full bg-white opacity-50 transition-opacity" data-slide="1"></button>
+   </div>
+ </section>
+
+ <section class="py-16 md:py-24 bg-white">
+  <div class="container mx-auto px-4">
+    <SectionTitle
+      title="Tentang Program PPK Ormawa"
+      subtitle="Program Penguatan Kapasitas Organisasi (PPK Ormawa) bertujuan untuk mengembangkan potensi desa melalui inovasi pengolahan susu."
+      centered={true}
+    />
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div>
+        <img 
+          src="/pemasaran-produk.jpg?height=600&width=800" 
+          alt="Pengolahan Susu" 
+          class="rounded-lg shadow-lg w-full"
+        />
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-blue-700 mb-4">Mengapa Program Ini Penting?</h3>
+        <p class="text-gray-700 mb-6">
+          Desa Purwobinangun memiliki potensi besar dalam produksi susu, namun masih terkendala dalam hal standarisasi produksi dan pemasaran. Program PPK Ormawa hadir untuk mengatasi tantangan tersebut melalui pendekatan Factory Sharing dan digitalisasi bisnis.
         </p>
-        <div class="flex flex-wrap gap-4">
-          <Button 
-            text="Pelajari Program" 
-            href="/luaran" 
-            variant="primary"
-            size="lg"
-          />
-          <Button 
-            text="Lihat Produk" 
-            href="/produk" 
-            variant="outline"
-            size="lg"
-            class="bg-white/10 border-white text-white hover:bg-white/20"
-          />
-        </div>
+        <ul class="space-y-3 mb-8">
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Meningkatkan kualitas produk olahan susu</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Membangun sistem Factory Sharing yang efisien</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Mengembangkan digitalisasi bisnis untuk pemasaran produk</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Meningkatkan kesejahteraan masyarakat desa</span>
+          </li>
+        </ul>
+        <Button 
+          text="Tentang Tim Pelaksana" 
+          href="/kemitraan" 
+          variant="secondary"
+        />
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- About Section -->
-  <section class="py-16 md:py-24 bg-white">
+  <section class="py-20 md:py-28 bg-gray-50">
     <div class="container mx-auto px-4">
-      <SectionTitle
-        title="Tentang Program PPK Ormawa"
-        subtitle="Program Penguatan Kapasitas Organisasi (PPK Ormawa) bertujuan untuk mengembangkan potensi desa melalui inovasi pengolahan susu."
-        centered={true}
-      />
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="text-center mb-16">
+        <p class="text-blue-600 font-bold mb-3 lg:text-2xl text-sm uppercase tracking-wide">PROGRAM</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          Juragan Perempuan Tani
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20">
+        <div class="order-2 lg:order-1">
+          <img 
+            src="/susucoklat.png" 
+            alt="Pelatihan Keterampilan Pertanian"
+            class="w-full h-auto rounded-2xl shadow-lg"
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Factory Sharing
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Rumah produksi bersama terstandarisasi untuk mendukung pengolahan susu yang efisien, higienis, dan kolaboratif.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Pendampingan CPPOB
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Memberikan bimbingan penerapan Cara Produksi Pangan Olahan yang Baik agar proses pengolahan susu terjamin aman, higienis, dan sesuai standar.
+          </p>
+        </div>
         <div>
           <img 
-            src="/pemasaran-produk.jpg?height=600&width=800" 
-            alt="Pengolahan Susu" 
-            class="rounded-lg shadow-lg w-full"
+            src="/susumelon.png" 
+            alt="Workshop Pengolahan Produk Susu"
+            class="w-full h-auto rounded-2xl shadow-lg"
           />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20">
+        <div class="order-2 lg:order-1">
+          <img 
+            src="/susucoklat.png" 
+            alt="Pendampingan CPPOB"
+            class="w-full h-auto rounded-2xl shadow-lg"
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Pendampingan Legalitas Produk
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Membantu dalam pengurusan sertifikasi PIRT (Pangan Industri Rumah Tangga) dan sertifikasi halal untuk meningkatkan kepercayaan konsumen dan memperluas pasar.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Digitalisasi Pencatatan Keuangan
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Mengimplementasikan sistem digital untuk pencatatan keuangan dan inventori yang memudahkan pengelolaan usaha dan meningkatkan transparansi bisnis.
+          </p>
         </div>
         <div>
-          <h3 class="text-2xl font-bold text-blue-700 mb-4">Mengapa Program Ini Penting?</h3>
-          <p class="text-gray-700 mb-6">
-            Desa Purwobinangun memiliki potensi besar dalam produksi susu, namun masih terkendala dalam hal standarisasi produksi dan pemasaran. Program PPK Ormawa hadir untuk mengatasi tantangan tersebut melalui pendekatan Factory Sharing dan digitalisasi bisnis.
+          <img 
+            src="/susumelon.png" 
+            alt="Digitalisasi Pencatatan"
+            class="w-full h-auto rounded-2xl shadow-lg"
+          />
+        </div>
+      </div>
+
+       <!-- Program Item 5 
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-20">
+        <div class="order-2 lg:order-1">
+          <img 
+            src="/susucoklat.png" 
+            alt="Legalitas Produk"
+            class="w-full h-auto rounded-2xl shadow-lg"
+          />
+        </div>
+        <div class="order-1 lg:order-2">
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Pendampingan Legalitas Produk
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Membantu dalam pengurusan sertifikasi PIRT (Pangan Industri Rumah Tangga) dan sertifikasi halal untuk meningkatkan kepercayaan konsumen dan memperluas pasar.
           </p>
-          <ul class="space-y-3 mb-8">
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Meningkatkan kualitas produk olahan susu</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Membangun sistem Factory Sharing yang efisien</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Mengembangkan digitalisasi bisnis untuk pemasaran produk</span>
-            </li>
-            <li class="flex items-start">
-              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Meningkatkan kesejahteraan masyarakat desa</span>
-            </li>
-          </ul>
-          <Button 
-            text="Tentang Tim Pelaksana" 
-            href="/kemitraan" 
-            variant="secondary"
+        </div>
+      </div> -->
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div>
+          <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+            Strategi Digital Marketing
+          </h3>
+          <p class="text-gray-600 leading-relaxed">
+            Memberikan pelatihan dan pendampingan dalam strategi pemasaran digital, termasuk penggunaan media sosial, marketplace, dan e-commerce untuk memperluas jangkauan pasar dan meningkatkan penjualan.
+          </p>
+        </div>
+        <div>
+          <img 
+            src="/susumelon.png" 
+            alt="Digital Marketing"
+            class="w-full h-auto rounded-2xl shadow-lg"
           />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Program Highlights -->
-  <section class="py-16 md:py-24 bg-blue-50">
+  <section class="py-20 md:py-28 bg-white">
     <div class="container mx-auto px-4">
-      <SectionTitle
-        title="Highlight Program"
-        subtitle="Beberapa pencapaian dari program PPK Ormawa Desa Purwobinangun"
-        centered={true}
-      />
-      
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Card
-          title="Factory Sharing"
-          description="Program ini hadir untuk menjawab tantangan keterbatasan alat dan biaya produksi UMKM olahan susu. Dengan konsep factory sharing, pelaku usaha dapat menggunakan fasilitas produksi bersama. Langkah ini mendorong efisiensi, kolaborasi, dan peningkatan kapasitas produksi lokal."
-          image="/placeholder.svg?height=400&width=600"
-          href="/luaran"
-        />
-        <Card
-          title="Standarisasi Produksi"
-          description="Program ini mendorong percepatan pengurusan izin PIRT dan sertifikasi halal bagi produk olahan susu lokal. Upaya ini bertujuan menjamin legalitas, keamanan pangan, serta kehalalan produk. Dengan demikian, konsumen mendapatkan perlindungan dan kepastian atas kualitas produk yang dikonsumsi."
-          image="/placeholder.svg?height=400&width=600"
-          href="/luaran"
-        />
-        <Card
-          title="Digitalisasi Bisnis"
-          description="Melalui pelatihan strategi promosi digital, program ini mendorong pemanfaatan marketplace dan media sosial. Tujuannya adalah meningkatkan daya saing produk lokal di pasar yang lebih luas. Dengan pendekatan ini, pelaku usaha dapat memperluas jangkauan dan menarik lebih banyak konsumen."
-          image="/placeholder.svg?height=400&width=600"
-          href="/luaran"
-        />
+      <div class="text-center mb-12">
+        <p class="text-blue-600 font-semibold mb-3 text-sm uppercase tracking-wide">Data Program</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Potensi Desa Purwobinangun</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="bg-blue-50 rounded-xl p-8 text-center border border-blue-100">
+          <div class="text-4xl md:text-5xl font-bold text-blue-700 mb-2">71,5L</div>
+          <div class="text-gray-600 font-medium">Produksi Susu Harian</div>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-8 text-center border border-blue-100">
+          <div class="text-4xl md:text-5xl font-bold text-blue-700 mb-2">Rp3.500</div>
+          <div class="text-gray-600 font-medium">Harga Jual per Liter</div>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-8 text-center border border-blue-100">
+          <div class="text-4xl md:text-5xl font-bold text-blue-700 mb-2">2</div>
+          <div class="text-gray-600 font-medium">Kelompok Pengolah</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Latest News -->
-  <!-- <section class="py-16 md:py-24 bg-white">
+   <!-- Luaran Program Section 
+  <section class="py-20 md:py-28 bg-gradient-to-br from-blue-50 to-indigo-50">
     <div class="container mx-auto px-4">
-      <div class="flex justify-between items-center mb-12">
-        <SectionTitle
-          title="Berita Terbaru"
-          subtitle="Informasi terkini seputar program PPK Ormawa dan perkembangan Desa Purwobinangun"
-        />
-        <Button
-          text="Semua Artikel"
-          href="/informasi"
-          variant="outline"
+      <div class="text-center mb-12">
+        <p class="text-blue-700 font-semibold mb-3 text-sm uppercase tracking-wide">Hasil Program</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Luaran Program PPK Ormawa</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          Target capaian dan hasil yang diharapkan dari program pemberdayaan masyarakat
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-blue-600">
+          <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mb-4 font-bold text-lg">1</div>
+          <h4 class="font-bold text-gray-900 mb-2 text-lg">Dokumentasi Program</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Buku refleksi, modul CPPOB, modul Digital Marketing, dan SOP produksi</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-blue-600">
+          <div class="bg-blue-100 text-blue-700 rounded-full w-12 h-12 flex items-center justify-center mb-4 font-bold text-lg">2</div>
+          <h4 class="font-bold text-gray-900 mb-2 text-lg">Media Publikasi</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Profil program dan media publikasi digital untuk promosi dan dokumentasi</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-purple-600">
+          <div class="bg-purple-100 text-purple-700 rounded-full w-12 h-12 flex items-center justify-center mb-4 font-bold text-lg">3</div>
+          <h4 class="font-bold text-gray-900 mb-2 text-lg">Sertifikasi Produk</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Sertifikasi PIRT dan halal untuk produk olahan susu</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-orange-600">
+          <div class="bg-orange-100 text-orange-700 rounded-full w-12 h-12 flex items-center justify-center mb-4 font-bold text-lg">4</div>
+          <h4 class="font-bold text-gray-900 mb-2 text-lg">Sistem Digital</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Sistem digital pencatatan keuangan dan inventori yang terintegrasi</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-teal-600">
+          <div class="bg-teal-100 text-teal-700 rounded-full w-12 h-12 flex items-center justify-center mb-4 font-bold text-lg">5</div>
+          <h4 class="font-bold text-gray-900 mb-2 text-lg">Peningkatan Omzet</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Peningkatan omzet dan keterampilan kewirausahaan pelaku usaha</p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-pink-600">
+          <div class="bg-pink-100 text-pink-700 rounded-full w-12 h-12 flex items-center justify-center mb-4 font-bold text-lg">6</div>
+          <h4 class="font-bold text-gray-900 mb-2 text-lg">Kelembagaan Mandiri</h4>
+          <p class="text-gray-600 text-sm leading-relaxed">Kelembagaan ekonomi lokal yang mandiri dan berkelanjutan</p>
+        </div>
+      </div> -->
+
+      <!-- <div class="text-center mt-12">
+        <Button 
+          text="Lihat Detail Luaran" 
+          href="/luaran" 
+          variant="primary"
+          class="bg-blue-700 hover:bg-blue-800 text-white"
         />
       </div>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <Card
-          title="Peresmian Fasilitas Factory Sharing"
-          description="Fasilitas baru untuk pengolahan susu diresmikan dengan kehadiran pejabat daerah dan mitra industri."
-          image="/placeholder.svg?height=400&width=600"
-          href="/informasi/peresmian-fasilitas"
-        />
-        <Card
-          title="Pelatihan Standarisasi Produksi"
-          description="Pelaku usaha di Desa Purwobinangun mengikuti pelatihan standarisasi produksi olahan susu."
-          image="/placeholder.svg?height=400&width=600"
-          href="/informasi/pelatihan-standarisasi"
-        />
-        <Card
-          title="Peluncuran Platform Digital"
-          description="Platform digital untuk pemasaran produk olahan susu Desa Purwobinangun resmi diluncurkan."
-          image="/placeholder.svg?height=400&width=600"
-          href="/informasi/peluncuran-platform"
+    </div> -->
+  </section>
+<!-- 
+   CTA Section with blog-style layout matching 3.png 
+  <section class="py-20 md:py-28 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p class="text-blue-600 font-bold mb-3 text-sm uppercase tracking-wide">INFORMASI</p>
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          Berita & Kegiatan Terbaru
+        </h2>
+      </div>
+
+      <div class="space-y-16">
+         Blog Item 1 
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <img 
+              src="/susucoklat.png" 
+              alt="Sosialisasi Program"
+              class="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="inline-block bg-blue-100 text-blue-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+              KEGIATAN
+            </span>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Sosialisasi Program PPK Ormawa
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Kegiatan sosialisasi program kepada masyarakat Desa Purwobinangun untuk memperkenalkan konsep factory sharing dan manfaat program bagi peternak lokal.
+            </p>
+            <Button 
+              text="Baca Selengkapnya" 
+              href="/informasi" 
+              variant="primary"
+              class="bg-blue-600 hover:bg-blue-700 text-white"
+            />
+          </div>
+        </div>
+
+         Blog Item 2 
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div>
+            <span class="inline-block bg-purple-100 text-purple-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+              WORKSHOP
+            </span>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Pelatihan Pengolahan Susu
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Workshop intensif tentang teknik pengolahan susu menjadi berbagai produk bernilai tambah seperti yogurt, keju, dan susu pasteurisasi dengan standar CPPOB.
+            </p>
+            <Button 
+              text="Baca Selengkapnya" 
+              href="/informasi" 
+              variant="primary"
+              class="bg-blue-600 hover:bg-blue-700 text-white"
+            />
+          </div>
+          <div>
+            <img 
+              src="/susumelon.png" 
+              alt="Pelatihan Pengolahan"
+              class="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </div>
+        </div>
+
+         Blog Item 3 
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <img 
+              src="/susucoklat.png" 
+              alt="Digital Marketing"
+              class="w-full h-auto rounded-2xl shadow-lg"
+            />
+          </div>
+          <div class="order-1 lg:order-2">
+            <span class="inline-block bg-teal-100 text-teal-700 text-xs font-semibold px-3 py-1 rounded-full mb-3">
+              PELATIHAN
+            </span>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Pelatihan Digital Marketing
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              Memberikan keterampilan pemasaran digital kepada pelaku usaha untuk memperluas jangkauan pasar melalui media sosial dan platform e-commerce.
+            </p>
+            <Button 
+              text="Baca Selengkapnya" 
+              href="/informasi" 
+              variant="primary"
+              class="bg-blue-600 hover:bg-blue-700 text-white"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <Button 
+          text="Lihat Semua Informasi" 
+          href="/informasi" 
+          variant="outline"
+          class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
         />
       </div>
     </div>
   </section> -->
 
-  <!-- CTA Section -->
-  <!-- <section class="py-16 md:py-24 bg-gradient-to-r from-blue-700 to-green-600 text-white">
+   Final CTA Section 
+  <section class="py-20 md:py-24 bg-gradient-to-r from-blue-700 to-blue-600 text-white">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">Tertarik dengan Program PPK Ormawa?</h2>
-      <p class="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
-        Pelajari lebih lanjut tentang program PPK Ormawa dan bagaimana Anda dapat terlibat dalam pengembangan Desa Purwobinangun.
+      <p class="text-xl mb-8 max-w-3xl mx-auto text-blue-50 leading-relaxed">
+        Pelajari lebih lanjut tentang program pemberdayaan masyarakat dan bagaimana Anda dapat terlibat dalam pengembangan Desa Purwobinangun.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <Button 
           text="Lihat Produk Kami" 
           href="/produk" 
           variant="primary"
-          size="lg"
           class="bg-white text-blue-700 hover:bg-blue-50"
         />
         <Button 
           text="Hubungi Kami" 
           href="/kemitraan#kontak" 
           variant="outline"
-          size="lg"
-          class="border-white text-white hover:bg-white/20"
+          class="border-2 border-white text-white hover:bg-white hover:text-blue-700"
         />
       </div>
     </div>
-  </section> -->
+  </section>
 </MainLayout>
+
+ Add slideshow JavaScript functionality 
+ <style>
+  .slideshow-container {
+    position: relative;
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slide.active {
+    opacity: 1;
+  }
+
+  .indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .indicator.active {
+    background-color: white;
+  }
+
+  .indicator:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+</style>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.hero-slide');
+  const indicators = document.querySelectorAll('.slide-indicator');
+  
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      if (i === index) {
+        slide.classList.remove('opacity-0');
+        slide.classList.add('opacity-100');
+      } else {
+        slide.classList.remove('opacity-100');
+        slide.classList.add('opacity-0');
+      }
+    });
+    
+    indicators.forEach((indicator, i) => {
+      if (i === index) {
+        indicator.classList.remove('opacity-50');
+        indicator.classList.add('opacity-100');
+      } else {
+        indicator.classList.remove('opacity-100');
+        indicator.classList.add('opacity-50');
+      }
+    });
+  }
+  
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+  }
+  
+  // Auto-advance slides every 3 seconds
+  setInterval(nextSlide, 3000);
+  
+  // Manual slide control
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      currentSlide = index;
+      showSlide(currentSlide);
+    });
+  });
+</script>
+

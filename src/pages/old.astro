@@ -1,0 +1,204 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Button from '../components/Button.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import Card from '../components/Card.astro';
+// import kegiatanImage from '../public/kegiatan.png';
+import { Image } from 'astro:assets';
+import kegiatanImage from '../assets/pur.jpeg';
+---
+
+<MainLayout title="Rumah">
+  <!-- Hero Section -->
+  <section class="relative text-white py-20 md:py-32">
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <img 
+        src={kegiatanImage.src || "/placeholder.svg"} 
+        alt="Desa Purwobinangun"
+        class="w-full h-full object-cover object-center"
+        loading="eager"
+        decoding="async"
+      />
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+          Desa Wirausaha PURWOBINANGUN 
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-white">
+          Penguatan Desa Wirausaha melalui Sentra Olahan Susu Terstandar berbasis Factory Sharing dan Digitalisasi Bisnis
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <Button 
+            text="Pelajari Program" 
+            href="/luaran" 
+            variant="primary"
+            size="lg"
+          />
+          <Button 
+            text="Lihat Produk" 
+            href="/produk" 
+            variant="outline"
+            size="lg"
+            class="bg-white/10 border-white text-white hover:bg-white/20"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <SectionTitle
+        title="Tentang Program PPK Ormawa"
+        subtitle="Program Penguatan Kapasitas Organisasi (PPK Ormawa) bertujuan untuk mengembangkan potensi desa melalui inovasi pengolahan susu."
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <img 
+            src="/pemasaran-produk.jpg?height=600&width=800" 
+            alt="Pengolahan Susu" 
+            class="rounded-lg shadow-lg w-full"
+          />
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold text-blue-700 mb-4">Mengapa Program Ini Penting?</h3>
+          <p class="text-gray-700 mb-6">
+            Desa Purwobinangun memiliki potensi besar dalam produksi susu, namun masih terkendala dalam hal standarisasi produksi dan pemasaran. Program PPK Ormawa hadir untuk mengatasi tantangan tersebut melalui pendekatan Factory Sharing dan digitalisasi bisnis.
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Meningkatkan kualitas produk olahan susu</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Membangun sistem Factory Sharing yang efisien</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Mengembangkan digitalisasi bisnis untuk pemasaran produk</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Meningkatkan kesejahteraan masyarakat desa</span>
+            </li>
+          </ul>
+          <Button 
+            text="Tentang Tim Pelaksana" 
+            href="/kemitraan" 
+            variant="secondary"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program Highlights -->
+  <section class="py-16 md:py-24 bg-blue-50">
+    <div class="container mx-auto px-4">
+      <SectionTitle
+        title="Highlight Program"
+        subtitle="Beberapa pencapaian dari program PPK Ormawa Desa Purwobinangun"
+        centered={true}
+      />
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Card
+          title="Factory Sharing"
+          description="Program ini hadir untuk menjawab tantangan keterbatasan alat dan biaya produksi UMKM olahan susu. Dengan konsep factory sharing, pelaku usaha dapat menggunakan fasilitas produksi bersama. Langkah ini mendorong efisiensi, kolaborasi, dan peningkatan kapasitas produksi lokal."
+          image="/placeholder.svg?height=400&width=600"
+          href="/luaran"
+        />
+        <Card
+          title="Standarisasi Produksi"
+          description="Program ini mendorong percepatan pengurusan izin PIRT dan sertifikasi halal bagi produk olahan susu lokal. Upaya ini bertujuan menjamin legalitas, keamanan pangan, serta kehalalan produk. Dengan demikian, konsumen mendapatkan perlindungan dan kepastian atas kualitas produk yang dikonsumsi."
+          image="/placeholder.svg?height=400&width=600"
+          href="/luaran"
+        />
+        <Card
+          title="Digitalisasi Bisnis"
+          description="Melalui pelatihan strategi promosi digital, program ini mendorong pemanfaatan marketplace dan media sosial. Tujuannya adalah meningkatkan daya saing produk lokal di pasar yang lebih luas. Dengan pendekatan ini, pelaku usaha dapat memperluas jangkauan dan menarik lebih banyak konsumen."
+          image="/placeholder.svg?height=400&width=600"
+          href="/luaran"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <!-- <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center mb-12">
+        <SectionTitle
+          title="Berita Terbaru"
+          subtitle="Informasi terkini seputar program PPK Ormawa dan perkembangan Desa Purwobinangun"
+        />
+        <Button
+          text="Semua Artikel"
+          href="/informasi"
+          variant="outline"
+        />
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <Card
+          title="Peresmian Fasilitas Factory Sharing"
+          description="Fasilitas baru untuk pengolahan susu diresmikan dengan kehadiran pejabat daerah dan mitra industri."
+          image="/placeholder.svg?height=400&width=600"
+          href="/informasi/peresmian-fasilitas"
+        />
+        <Card
+          title="Pelatihan Standarisasi Produksi"
+          description="Pelaku usaha di Desa Purwobinangun mengikuti pelatihan standarisasi produksi olahan susu."
+          image="/placeholder.svg?height=400&width=600"
+          href="/informasi/pelatihan-standarisasi"
+        />
+        <Card
+          title="Peluncuran Platform Digital"
+          description="Platform digital untuk pemasaran produk olahan susu Desa Purwobinangun resmi diluncurkan."
+          image="/placeholder.svg?height=400&width=600"
+          href="/informasi/peluncuran-platform"
+        />
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA Section -->
+  <!-- <section class="py-16 md:py-24 bg-gradient-to-r from-blue-700 to-green-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Tertarik dengan Program PPK Ormawa?</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
+        Pelajari lebih lanjut tentang program PPK Ormawa dan bagaimana Anda dapat terlibat dalam pengembangan Desa Purwobinangun.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <Button 
+          text="Lihat Produk Kami" 
+          href="/produk" 
+          variant="primary"
+          size="lg"
+          class="bg-white text-blue-700 hover:bg-blue-50"
+        />
+        <Button 
+          text="Hubungi Kami" 
+          href="/kemitraan#kontak" 
+          variant="outline"
+          size="lg"
+          class="border-white text-white hover:bg-white/20"
+        />
+      </div>
+    </div>
+  </section> -->
+</MainLayout>
