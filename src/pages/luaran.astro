@@ -1,269 +1,327 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import SectionTitle from '../components/SectionTitle.astro';
-import Button from '../components/Button.astro';
-import Card from '../components/Card.astro';
 ---
 
 <MainLayout title="Luaran Program">
-  <!-- Hero Section -->
-  <section class="bg-blue-700 text-white py-16">
-    <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold mb-6">Luaran Program PPK Ormawa</h1>
-        <p class="text-xl text-blue-100 mb-8">
-          Hasil dan keluaran utama dari program PPK Ormawa Desa Purwobinangun Dairypreneur
+  <!-- Updated Hero Section with full-width background image, dark gradient overlay, left-bottom text positioning, and fade-in animation -->
+  <section class="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-end" style="background-image: url('/luarann.png');">
+    <!-- Dark gradient overlay for readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+    
+    <!-- Hero Content - positioned at left bottom -->
+    <div class="relative z-10 container mx-auto px-6 md:px-12 pb-20 md:pb-32">
+      <div class="max-w-4xl hero-text-fade-in">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Luaran
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl">
+          Program Desa Wirausaha Purwobinangun dilaksanakan untuk meningkatkan kemandirian ekonomi dan keterampilan masyarakat melalui inovasi, pelatihan, dan pengembangan usaha berbasis potensi lokal. Program ini menghasilkan berbagai luaran penting yang mendukung masyarakat desa dalam mengelola usaha secara berkelanjutan, efektif, dan berdaya saing tinggi.
         </p>
       </div>
     </div>
   </section>
 
-  <!-- Main Output Section -->
-  <section class="py-16 bg-white">
+  <!-- Introduction Section -->
+  <section class="py-16 bg-gradient-to-b from-blue-50 to-white">
     <div class="container mx-auto px-4">
-      <SectionTitle
-        title="Luaran Utama"
-        subtitle="Dokumentasi dan hasil utama dari pelaksanaan program PPK Ormawa"
-        centered={true}
-      />
-      
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-16">
-        <!-- Buku Dokumentasi -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-blue-100">
-          <div class="h-56 bg-blue-50 flex items-center justify-center p-4">
-            <img 
-              src="/modul.png"?height=400&width=300" 
-              alt="Buku Dokumentasi" 
-              class="h-full object-contain"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-              <h3 class="text-xl font-bold text-blue-800">Buku Purwobinangun Dairypreneur Village</h3>
-            </div>
-            <p class="text-gray-700 mb-4">
-              "Buku ini membahas penerapan sistem produksi terstandar dalam pengolahan susu. Penggunaan fasilitas produksi bersama (factory sharing) dinilai efektif meningkatkan standarisasi dan kualitas produk. Tujuannya adalah memperkuat daya saing Desa Wirausaha melalui digitalisasi dan kolaborasi produksi."
-            </p>
-            <div class="flex space-x-3">
-              <Button 
-                text="Baca Online" 
-                href="#" 
-                variant="primary"
-                size="sm"
-              />
-              <Button 
-                text="Unduh PDF" 
-                href="#" 
-                variant="outline"
-                size="sm"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Dokumentasi Media -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-blue-100">
-          <div class="h-56 bg-blue-50 flex items-center justify-center p-4">
-            <img 
-              src="/placeholder.svg?height=400&width=600" 
-              alt="Dokumentasi Media" 
-              class="h-full object-contain"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              <h3 class="text-xl font-bold text-blue-800">Dokumentasi Media & Publikasi</h3>
-            </div>
-            <p class="text-gray-700 mb-4">
-              Media dokumentasi program mencakup tahapan pembenahan sistem produksi susu dari bahan baku hingga produk jadi. Disertakan juga pemanfaatan ruang factory sharing, proses sertifikasi, dan testimoni UMKM. Video dipublikasikan mingguan melalui YouTube, Instagram, dan TikTok @ppko.sinerauii.
-            </p>
-            <div class="flex space-x-3">
-              <Button 
-                text="Lihat Galeri" 
-                href="#galeri" 
-                variant="primary"
-                size="sm"
-              />
-              <Button 
-                text="Tonton Video" 
-                href="#video" 
-                variant="outline"
-                size="sm"
-              />
-            </div>
-          </div>
-        </div>
-
-        <!-- Poster Hasil -->
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-blue-100">
-          <div class="h-56 bg-blue-50 flex items-center justify-center p-4">
-            <img 
-              src="/placeholder.svg?height=400&width=300" 
-              alt="Poster Hasil" 
-              class="h-full object-contain"
-            />
-          </div>
-          <div class="p-6">
-            <div class="flex items-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <h3 class="text-xl font-bold text-blue-800">Poster Hasil Program</h3>
-            </div>
-            <p class="text-gray-700 mb-4">
-              Poster program memuat informasi lengkap seperti judul, pelaksana, metode, hasil, simpulan, hingga kontak dan sponsor, dengan alur Tujuan-Metode-Hasil-Simpulan. Disusun ringkas dan fokus pada inti permasalahan. Dicetak dalam ukuran A1 untuk sosialisasi dan A4 untuk laporan akhir, tersedia dalam hardcopy dan softcopy.
-            </p>
-            <div class="flex space-x-3">
-              <Button 
-                text="Lihat Poster" 
-                href="#poster" 
-                variant="primary"
-                size="sm"
-              />
-              <Button 
-                text="Unduh Poster" 
-                href="#" 
-                variant="outline"
-                size="sm"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Additional Outputs -->
-      <SectionTitle
-        title="Luaran Tambahan"
-        subtitle="Hasil pendukung dari program PPK Ormawa"
-        centered={true}
-      />
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-        <!-- Profil Program -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-blue-100 flex flex-col md:flex-row">
-          <div class="md:w-1/3 bg-blue-50 flex items-center justify-center p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-            </svg>
-          </div>
-          <div class="md:w-2/3 p-6">
-            <h3 class="text-xl font-bold text-blue-800 mb-3">Profil Program</h3>
-            <p class="text-gray-700 mb-4">
-              Profil program yang berisi dokumen sederhana mengenai gambaran program, penggunaan factory sharing, dan izin resmi sertifikat halal dan izin Produk Industri Rumah Tangga (PIRT). 
-            </p>
-            <Button 
-              text="Lihat Profil" 
-              href="#profil" 
-              variant="primary"
-              size="sm"
-            />
-          </div>
-        </div>
-
-        <!-- Factory Sharing -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden border border-blue-100 flex flex-col md:flex-row">
-          <div class="md:w-1/3 bg-blue-50 flex items-center justify-center p-4">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-            </svg>
-          </div>
-          <div class="md:w-2/3 p-6">
-            <h3 class="text-xl font-bold text-blue-800 mb-3">Pengoperasian Ruang Factory Sharing</h3>
-            <p class="text-gray-700 mb-4">
-              Ruang factory sharing digunakan secara kolektif dengan fasilitas yang layak dan memenuhi standar. Tujuannya untuk menghasilkan produk susu yang berkualitas dan terstandar secara berkelanjutan.
-            </p>
-            <Button 
-              text="Lihat Dokumentasi" 
-              href="#factory-sharing" 
-              variant="primary"
-              size="sm"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- Gallery Section -->
-      <div id="galeri" class="mb-16">
-        <SectionTitle
-          title="Galeri Dokumentasi"
-          subtitle="Dokumentasi visual dari berbagai tahapan program PPKO"
-        />
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Capaian Program yang Terukur
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed mb-12">
+          Program ini menghasilkan berbagai luaran yang terbagi menjadi Luaran Wajib dan Luaran Tambahan, 
+          semuanya dirancang untuk mendukung keberlanjutan dan pengembangan industri olahan susu di Desa Purwobinangun.
+        </p>
         
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 1" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 2" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 3" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 4" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 5" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 6" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 7" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-          <img src="/placeholder.svg?height=300&width=300" alt="Dokumentasi 8" class="rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 w-full h-48 object-cover" />
-        </div>
-      </div>
-
-      <!-- Video Section -->
-      <div id="video" class="mb-16">
-        <SectionTitle
-          title="Video Highlight"
-          subtitle="Video dokumentasi kegiatan program PPKO"
-        />
-        
-        <div class="aspect-w-16 aspect-h-9 bg-blue-50 rounded-lg shadow-lg overflow-hidden">
-          <div class="flex items-center justify-center h-full">
-            <div class="text-center">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-blue-600 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              <p class="text-blue-800 font-medium">Video Highlight Program PPKO</p>
-            </div>
+        <!-- Stats -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-600">
+            <div class="text-4xl font-bold text-blue-600 mb-2">3</div>
+            <div class="text-gray-600 font-medium">Luaran Wajib</div>
           </div>
-        </div>
-      </div>
-
-      <!-- Poster Section -->
-      <div id="poster" class="mb-16">
-        <SectionTitle
-          title="Poster Hasil Program"
-          subtitle="Poster visual yang menampilkan hasil program PPKO"
-        />
-        
-        <div class="bg-white rounded-lg shadow-lg overflow-hidden border border-blue-100 p-6">
-          <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/3 mb-6 md:mb-0 md:pr-6">
-              <img 
-                src="/placeholder.svg?height=600&width=400" 
-                alt="Poster Hasil Program" 
-                class="rounded-lg shadow-md mx-auto"
-              />
-            </div>
-            <div class="md:w-2/3">
-              <h3 class="text-2xl font-bold text-blue-800 mb-4">Desa Purwobinangun Dairypreneur</h3>
-              <div class="space-y-4 text-gray-700">
-                <p><strong class="text-blue-700">Judul:</strong> Penguatan Desa Wirausaha melalui Sentra Olahan Susu Terstandar</p>
-                <p><strong class="text-blue-700">Pelaksana:</strong> Tim PPKO Universitas Indonesia</p>
-                <p><strong class="text-blue-700">Latar Belakang:</strong> Desa Purwobinangun memiliki potensi besar dalam produksi susu, namun terkendala dalam standarisasi dan pemasaran.</p>
-                <p><strong class="text-blue-700">Metode:</strong> Penerapan sistem Factory Sharing dan digitalisasi bisnis untuk meningkatkan kualitas dan jangkauan pemasaran.</p>
-                <p><strong class="text-blue-700">Hasil:</strong> Peningkatan kualitas produk, perluasan pasar, dan peningkatan pendapatan pelaku usaha.</p>
-              </div>
-              <div class="mt-6">
-                <Button 
-                  text="Unduh Poster (PDF)" 
-                  href="#" 
-                  variant="primary"
-                  size="md"
-                />
-              </div>
-            </div>
+          <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-500">
+            <div class="text-4xl font-bold text-blue-600 mb-2">8</div>
+            <div class="text-gray-600 font-medium">Luaran Tambahan</div>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg p-6 border-t-4 border-blue-400">
+            <div class="text-4xl font-bold text-blue-600 mb-2">11</div>
+            <div class="text-gray-600 font-medium">Total Luaran</div>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Luaran Wajib Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <!-- <div class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+          MANDATORY OUTPUTS
+        </div> -->
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Luaran
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Capaian utama yang wajib dihasilkan dari pelaksanaan program PPK Ormawa
+        </p>
+      </div>
+
+      <!-- Luaran Wajib Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <!-- 1. Buku Refleksi -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200">
+          <!-- Changed from blue gradient to white background -->    
+          <div class="h-48 bg-white relative overflow-hidden flex items-center justify-center">
+            <img 
+              src="/bukurefleksi.png" 
+              alt="Buku Refleksi" 
+              class="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">01</span>
+              <h3 class="text-2xl font-bold text-gray-900">Buku Refleksi</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Membahas standar produksi susu, efektivitas factory sharing, serta pengalaman kelompok pengolah dalam meningkatkan kualitas dan daya saing produk olahan susu di Desa Purwobinangun.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Media Dokumentasi & Publikasi -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200">
+          <!-- Changed from blue gradient to white background -->
+          <div class="h-48 bg-white relative overflow-hidden flex items-center justify-center">
+            <img src="/media.png" alt="Media Dokumentasi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">02</span>
+              <h3 class="text-2xl font-bold text-gray-900">Media Dokumentasi</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Konten video mingguan yang mendokumentasikan proses produksi, sertifikasi, dan pemasaran produk olahan susu. Dipublikasikan melalui YouTube, Instagram, dan TikTok untuk edukasi dan promosi.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Poster Program -->
+        <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200">
+          <!-- Changed from blue gradient to white background -->
+          <div class="h-48 bg-white relative overflow-hidden flex items-center justify-center">
+            <img src="/susucoklat.png" alt="Poster Program" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"/>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center mb-4">
+              <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mr-3">03</span>
+              <h3 class="text-2xl font-bold text-gray-900">Poster Program</h3>
+            </div>
+            <p class="text-gray-600 leading-relaxed">
+              Ringkasan program mencakup judul, metode, hasil, dan simpulan dalam format A1 & A4. Berfungsi sebagai media edukasi dan promosi yang informatif dan mudah dipahami.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luaran Tambahan Section -->
+  <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <div class="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-bold mb-4">
+          ADDITIONAL OUTPUTS
+        </div>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Luaran Tambahan
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Hasil pendukung yang memperkuat capaian dan keberlanjutan program PPK Ormawa
+        </p>
+      </div>
+
+      <!-- Luaran Tambahan Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <!-- 1. Profil Program -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 00-2-2V5a2 2 0 002-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Profil Program</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Gambaran singkat tentang pemanfaatan factory sharing, legalitas PIRT dan halal.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2. Pengoperasian Factory Sharing -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Factory Sharing</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Penjelasan fasilitas produksi kolektif dengan standar higienis berkelanjutan.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3. Modul & Formulir CPPOB -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Modul CPPOB</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Panduan lengkap produksi pangan olahan yang baik, aman dan higienis.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4. SOP Produksi & Pengemasan -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">SOP Produksi</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Dokumen visual dan teks untuk konsistensi produksi dan pengemasan.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5. Modul Digital Marketing -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Digital Marketing</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Strategi branding, media sosial, dan marketplace untuk perluasan pasar.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6. Ide Konten Mingguan -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Konten Mingguan</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Rencana promosi kreatif berkelanjutan untuk engagement media sosial.
+            </p>
+          </div>
+        </div>
+
+        <!-- 7. Artikel Ilmiah / Video Highlight -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Publikasi Ilmiah</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Artikel ilmiah atau video highlight sebagai rujukan akademik program.
+            </p>
+          </div>
+        </div>
+
+        <!-- 8. Publikasi Media Massa -->
+        <div class="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100 group">
+          <div class="p-6">
+            <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-lg p-4 mb-4 inline-block group-hover:scale-110 transition-transform duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-2">Media Massa</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Publikasi capaian program ke masyarakat luas untuk awareness.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+      <div class="absolute bottom-0 left-0 w-72 h-72 bg-blue-300 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6">
+          Tertarik dengan Program Kami?
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+          Pelajari lebih lanjut tentang bagaimana program ini memberdayakan perempuan tani 
+          dan mengembangkan industri olahan susu di Desa Purwobinangun
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/profile" class="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300 shadow-lg">
+            Lihat Profil Program
+          </a>
+          <a href="/dokumentasi" class="inline-block bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 transition-colors duration-300 border-2 border-white/30">
+            Dokumentasi Kegiatan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 </MainLayout>
+
+<!-- Added fade-in animation styles for hero text -->
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-text-fade-in {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .hero-text-fade-in h1 {
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .hero-text-fade-in p {
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+</style>

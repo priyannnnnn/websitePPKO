@@ -3,68 +3,20 @@ import MainLayout from '../layouts/MainLayout.astro';
 ---
 
 <MainLayout title="Profile" description="Profile PPKO Ormawa Desa Purwobinangun - Tentang Kami, Visi Misi, Empat Pilar, Road Map, dan Struktur Organisasi">
-  <!-- Tentang Kami Section -->
-  <!-- <section class="relative min-h-screen full-bg-image parallax-bg" style={`background-image: url('https://res.cloudinary.com/delcqotzz/image/upload/v1755188062/comingsoon_fiks_axjwb7.png');`}>
-    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-    <div class="relative z-10 container mx-auto px-4 py-20">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
-        <div class="text-white animate-on-scroll">
-          <h1 class="text-5xl md:text-6xl font-bold mb-6 text-amber-100">Tentang Kami</h1>
-          <div class="bg-black/40 backdrop-blur-sm rounded-lg p-8 border border-amber-200/20">
-            <p class="text-xl leading-relaxed mb-6 text-amber-50">
-              PPKO Ormawa Desa Purwobinangun adalah program inovatif yang berfokus pada penguatan desa wirausaha melalui pengembangan sentra olahan susu terstandar.
-            </p>
-            <p class="text-lg leading-relaxed mb-6 text-amber-100">
-              Kami menggabungkan konsep Factory Sharing dengan digitalisasi bisnis untuk menciptakan ekosistem kewirausahaan yang berkelanjutan di Desa Purwobinangun.
-            </p>
-            <p class="text-lg leading-relaxed text-amber-100">
-              Dengan semangat gotong royong dan inovasi, kami berkomitmen untuk memberdayakan masyarakat lokal dan mengangkat potensi ekonomi desa melalui produk olahan susu berkualitas tinggi.
-            </p>
-          </div>
-        </div> -->
-        <section class="relative min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://res.cloudinary.com/delcqotzz/image/upload/v1755187524/PPKOimages2_q1leps.jpg?height=800&width=1200');">
-          <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-          <div class="relative z-10 container mx-auto px-4 py-20">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
-              <div class="text-white animate-on-scroll">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-amber-100">Tentang Kami</h1>
-                <div class="rounded-lg p-150">
-                  <p class="text-xl leading-relaxed mb-6 text-amber-50">
-                    PPKO Ormawa Desa Purwobinangun adalah program inovatif yang berfokus pada penguatan desa wirausaha melalui pengembangan sentra olahan susu terstandar.
-                  </p>
-                  <p class="text-lg leading-relaxed mb-6 text-amber-100">
-                    Kami menggabungkan konsep Factory Sharing dengan digitalisasi bisnis untuk menciptakan ekosistem kewirausahaan yang berkelanjutan di Desa Purwobinangun.
-                  </p>
-                  <p class="text-lg leading-relaxed text-amber-100">
-                    Dengan semangat gotong royong dan inovasi, kami berkomitmen untuk memberdayakan masyarakat lokal dan mengangkat potensi ekonomi desa melalui produk olahan susu berkualitas tinggi.
-                  </p>
-                </div>
-              </div>
-        
-        <!-- <div class="grid grid-cols-2 gap-4 animate-on-scroll">
-          <div class="space-y-4">
-            <img 
-              src="/ibu-ibu.png?height=300&width=250" 
-              alt="Aktivitas Peternakan Sapi" 
-              class="rounded-lg shadow-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-            />
-            <img 
-              src="https://res.cloudinary.com/delcqotzz/image/upload/v1755187524/PPKOimages2_q1leps.jpg?height=250&width=250" 
-              alt="Proses Pengolahan Susu" 
-              class="rounded-lg shadow-lg w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          <img 
-              src="https://res.cloudinary.com/delcqotzz/image/upload/v1755187524/PPKOimages4_mh5woq.jpg?height=300&width=250" 
-              alt="Wirausaha Lokal" 
-              class="rounded-lg shadow-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-            />
-            <img 
-            src="https://res.cloudinary.com/delcqotzz/image/upload/v1755187524/PPKOimages4_mh5woq.jpg?height=300&width=250" 
-            alt="Wirausaha Lokal" 
-            class="rounded-lg shadow-lg w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div> -->
+  <!-- Updated Tentang Kami Section to match luaran.astro hero design with full-width background, dark gradient overlay, left-bottom text positioning, and fade-in animation -->
+  <section class="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-end" style="background-image: url('https://res.cloudinary.com/delcqotzz/image/upload/v1755187524/PPKOimages2_q1leps.jpg');">
+    <!-- Dark gradient overlay for readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
+    
+    <!-- Hero Content - positioned at left bottom -->
+    <div class="relative z-10 container mx-auto px-6 md:px-12 pb-20 md:pb-32">
+      <div class="max-w-4xl hero-text-fade-in text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          Tentang Kami
+        </h1>
+        <p class="text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto md:mx-0">
+          Program Desa Wirausaha Purwobinangun dilaksanakan untuk meningkatkan kemandirian ekonomi dan keterampilan masyarakat melalui inovasi, pelatihan, dan pengembangan usaha berbasis potensi lokal. Program ini menghasilkan berbagai luaran penting yang mendukung masyarakat desa dalam mengelola usaha secara berkelanjutan, efektif, dan berdaya saing tinggi.
+        </p>
       </div>
     </div>
   </section>
@@ -569,3 +521,30 @@ import MainLayout from '../layouts/MainLayout.astro';
     </div>
   </section>
 </MainLayout>
+
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-text-fade-in {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .hero-text-fade-in h1 {
+    animation: fadeInUp 1s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+
+  .hero-text-fade-in p {
+    animation: fadeInUp 1s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+</style>
