@@ -1,0 +1,159 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const metadata = {
+  title: 'Review Produk',
+};
+
+const reviews = [
+  {
+    id: 1,
+    productName: 'Susu Pasteurisasi Premium',
+    rating: 5,
+    reviewer: 'Bu Siti Rahayu',
+    date: '15 Oktober 2024',
+    review: 'Produk yang luar biasa! Rasa susu sangat alami dan teksturnya sempurna. Saya merekomendasikan ke semua teman saya.',
+    image: '/susucoklat.png'
+  },
+  {
+    id: 2,
+    productName: 'Stik Susu Cokelat Rasa Original',
+    rating: 5,
+    reviewer: 'Bapak Ahmad Wijaya',
+    date: '12 Oktober 2024',
+    review: 'Camilan favorit anak-anak saya. Enak, sehat, dan terbuat dari bahan alami berkualitas tinggi.',
+    image: '/susumelon.png'
+  },
+  {
+    id: 3,
+    productName: 'Susu Pasteurisasi Premium',
+    rating: 4,
+    reviewer: 'Ibu Maya Putri',
+    date: '10 Oktober 2024',
+    review: 'Sangat baik untuk keluarga. Hanya saja packaging bisa lebih menarik lagi untuk menarik konsumen muda.',
+    image: '/susucoklat.png'
+  },
+  {
+    id: 4,
+    productName: 'Yogurt Tradisional Purwobinangun',
+    rating: 5,
+    reviewer: 'Dr. Budi Santoso',
+    date: '08 Oktober 2024',
+    review: 'Kualitas terbaik yang pernah saya coba. Probiotik alami dan tanpa pengawet berbahaya. Sangat sehat!',
+    image: '/susumelon.png'
+  },
+  {
+    id: 5,
+    productName: 'Stik Susu Cokelat Rasa Original',
+    rating: 4,
+    reviewer: 'Sri Lestari',
+    date: '05 Oktober 2024',
+    review: 'Produk berkualitas dari lokal yang bisa bersaing dengan brand nasional. Terus berkembang dan inovasi!',
+    image: '/susucoklat.png'
+  },
+  {
+    id: 6,
+    productName: 'Keju Tradisional Rendah Lemak',
+    rating: 5,
+    reviewer: 'Anita Wijaya',
+    date: '01 Oktober 2024',
+    review: 'Ini adalah keju terbaik yang pernah saya makan. Rasa gurih alami tanpa MSG. Highly recommended!',
+    image: '/susumelon.png'
+  }
+];
+
+const renderStars = (rating) => {
+  return Array.from({ length: 5 }, (_, i) => (
+    i < rating ? '★' : '☆'
+  )).join('');
+};
+---
+
+<MainLayout title={metadata.title}>
+  <!-- Hero Section -->
+  <div class="relative w-full h-[40rem] overflow-hidden">
+    <img 
+      src="/placeholder.svg?height=640&width=1920"
+      alt="Review Produk"
+      class="w-full h-full object-cover"
+      style="filter: brightness(50%);"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-16">
+      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-6 animate-fadeIn">Review Produk</h1>
+      <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-4xl text-gray-100 animate-fadeIn" style="animation-delay: 0.2s;">
+        Testimoni nyata dari pelanggan tentang kualitas dan kepuasan mereka terhadap produk olahan susu kami yang premium dan terjaga kualitasnya.
+      </p>
+    </div>
+  </div>
+
+  <!-- Reviews Grid -->
+  <div class="container mx-auto px-4 py-16 lg:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {reviews.map((item) => (
+        <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full">
+          <div class="h-48 bg-blue-50 overflow-hidden">
+            <img src={item.image || "/placeholder.svg"} alt={item.productName} class="w-full h-full object-cover" />
+          </div>
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">
+              {item.productName}
+            </h3>
+            <div class="flex items-center mb-3">
+              <span class="text-yellow-400 text-lg mr-2">
+                {renderStars(item.rating)}
+              </span>
+              <span class="text-gray-600 text-sm">
+                {item.rating}/5 Rating
+              </span>
+            </div>
+            <p class="text-gray-700 mb-4 flex-grow italic">
+              "{item.review}"
+            </p>
+            <div class="pt-4 border-t border-gray-200">
+              <p class="text-sm font-semibold text-gray-800">
+                {item.reviewer}
+              </p>
+              <p class="text-xs text-gray-500">
+                {item.date}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Summary Section -->
+  <div class="container mx-auto px-4 py-16 lg:py-20 bg-blue-50">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div class="p-6">
+        <h4 class="text-4xl font-bold text-blue-600 mb-2">4.8/5</h4>
+        <p class="text-gray-700">Rating Rata-rata</p>
+      </div>
+      <div class="p-6">
+        <h4 class="text-4xl font-bold text-blue-600 mb-2">250+</h4>
+        <p class="text-gray-700">Pelanggan Puas</p>
+      </div>
+      <div class="p-6">
+        <h4 class="text-4xl font-bold text-blue-600 mb-2">6</h4>
+        <p class="text-gray-700">Variasi Produk</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+  </style>
+</MainLayout>

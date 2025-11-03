@@ -16,9 +16,29 @@ const { title, description = "Program PPKO Desa Purwobinangun Dairypreneur" } = 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const informasiBtn = document.getElementById('informasi-btn');
+        const informasiMenu = document.getElementById('informasi-menu');
+        
+        if (informasiBtn && informasiMenu) {
+          informasiBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            informasiMenu.classList.toggle('hidden');
+          });
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', (e) => {
+            if (!informasiBtn.contains(e.target) && !informasiMenu.contains(e.target)) {
+              informasiMenu.classList.add('hidden');
+            }
+          });
+        }
+      });
+    </script>
   </head>
   <body class="font-[Poppins] bg-white">
-    <header class="sticky top-2 z-50 bg-white shadow-md">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
       <div class="container mx-auto px-4 py-3">
         <nav class="flex flex-col md:flex-row justify-between items-center">
           <div class="flex items-center mb-4 md:mb-0">
@@ -47,19 +67,42 @@ const { title, description = "Program PPKO Desa Purwobinangun Dairypreneur" } = 
                 Profile
               </a>
             </li>
-            <!-- <li>
-              <a href="/informasi" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-50 text-blue-700 hover:text-blue-800 transition-colors">
+            <!-- Add dropdown menu for Informasi -->
+            <li class="relative group">
+              <button 
+                id="informasi-btn"
+                class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-50 text-blue-700 hover:text-blue-800 transition-colors flex items-center"
+              >
                 Informasi
-              </a>
-            </li> -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <!-- Dropdown menu with sub-items -->
+              <div 
+                id="informasi-menu"
+                class="hidden absolute left-0 mt-0 w-56 bg-white rounded-md shadow-lg py-2 z-50"
+              >
+                <a href="/informasi/artikel" class="block px-4 py-2 text-sm text-blue-700 hover:bg-blue-50">
+                  Artikel
+                </a>
+                <a href="/informasi/blog" class="block px-4 py-2 text-sm text-blue-700 hover:bg-blue-50">
+                  Blog
+                </a>
+                <a href="/informasi/review-produk" class="block px-4 py-2 text-sm text-blue-700 hover:bg-blue-50">
+                  Review Produk
+                </a>
+                <a href="/informasi/factory-sharing" class="block px-4 py-2 text-sm text-blue-700 hover:bg-blue-50">
+                  Factory Sharing
+                </a>
+                <a href="/kemitraan" class="block px-4 py-2 text-sm text-blue-700 hover:bg-blue-50">
+                  Kemitraan
+                </a>
+              </div>
+            </li>
             <li>
               <a href="/produk" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-50 text-blue-700 hover:text-blue-800 transition-colors">
                 Produk
-              </a>
-            </li>
-            <li>
-              <a href="/kemitraan" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-blue-50 text-blue-700 hover:text-blue-800 transition-colors">
-                Kemitraan
               </a>
             </li>
           </ul>
@@ -114,7 +157,6 @@ const { title, description = "Program PPKO Desa Purwobinangun Dairypreneur" } = 
                 </svg>
               </a>
               
-              <!-- Logo images -->
               <a href="#" class="bg-white rounded p-1.5 flex items-center justify-center">
                 <img
                   src="/kampus.png"

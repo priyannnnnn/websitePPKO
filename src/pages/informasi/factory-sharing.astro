@@ -1,0 +1,176 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+
+const metadata = {
+  title: 'Factory Sharing',
+};
+
+const facilities = [
+  {
+    number: 1,
+    title: 'Denah Factory Sharing',
+    description: 'Layout dari rumah produksi bersama yang menggambarkan alur kerja dari bahan baku hingga pengemasan dengan desain optimal.',
+    icon: '📐'
+  },
+  {
+    number: 2,
+    title: 'Tempat Parkir',
+    description: 'Area parkir khusus yang mendukung logistik dan pengangkutan bahan baku, serta memudahkan akses kendaraan pengunjung.',
+    icon: '🚗'
+  },
+  {
+    number: 3,
+    title: 'Bahan Baku',
+    description: 'Area penerimaan dan pengecekan bahan baku susu sapi sebelum masuk proses produksi dengan standar kualitas tinggi.',
+    icon: '🥛'
+  },
+  {
+    number: 4,
+    title: 'Area Produksi',
+    description: 'Zona produksi utama yang dilengkapi dengan peralatan modern dan teknologi terkini untuk pengolahan susu berkualitas.',
+    icon: '⚙️'
+  },
+  {
+    number: 5,
+    title: 'Area Penyimpanan',
+    description: 'Ruang penyimpanan berpendingin untuk produk jadi dan material kemasan dengan kondisi standar internasional.',
+    icon: '📦'
+  },
+  {
+    number: 6,
+    title: 'Halaman Rumah Produksi',
+    description: 'Area eksternal rumah produksi yang menyediakan akses, ventilasi, dan memfasilitasi kegiatan loading-unloading.',
+    icon: '🏭'
+  }
+];
+---
+
+<MainLayout title={metadata.title}>
+  <!-- Hero Section -->
+  <div class="relative w-full h-[40rem] overflow-hidden">
+    <img 
+      src="/placeholder.svg?height=640&width=1920"
+      alt="Factory Sharing"
+      class="w-full h-full object-cover"
+      style="filter: brightness(40%);"
+    />
+    <div class="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 flex flex-col items-center justify-center p-6">
+      <div class="text-center">
+        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">PENCAPAIAN LUARAN TEKNOLOGI</span>
+        <h1 class="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center mb-4 animate-fadeIn">
+          FACTORY SHARING 95%
+        </h1>
+        <p class="text-gray-200 text-lg sm:text-xl md:text-2xl font-light max-w-3xl mx-auto animate-fadeIn" style="animation-delay: 0.2s;">
+          Sentra produksi bersama dengan standar higienis dan teknologi modern untuk pemberdayaan masyarakat Purwobinangun
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress Indicator -->
+  <div class="container mx-auto px-4 py-12">
+    <div class="flex items-center justify-center gap-4">
+      <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center shadow-lg">
+        <span class="text-3xl font-bold text-white">95%</span>
+      </div>
+      <div class="text-left">
+        <h3 class="text-2xl font-bold text-blue-800">Tingkat Penyelesaian</h3>
+        <p class="text-gray-600">Fasilitas Factory Sharing telah mencapai 95% tahap penyelesaian pembangunan</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Facilities Grid -->
+  <div class="container mx-auto px-4 py-16 lg:py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+      Fasilitas & Infrastruktur Utama
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {facilities.map((facility) => (
+        <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-blue-100">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="text-5xl">{facility.icon}</div>
+            <div className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
+              {facility.number}
+            </div>
+          </div>
+          <h3 class="text-xl font-bold text-blue-800 mb-3">
+            {facility.title}
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            {facility.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Key Features Section -->
+  <div class="container mx-auto px-4 py-16 lg:py-20 bg-blue-50 rounded-lg mb-16">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+      Standar & Sertifikasi
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-4xl mb-3">✓</div>
+        <h4 class="font-bold text-blue-800 mb-2">Standar CPPOB</h4>
+        <p class="text-sm text-gray-700">Cara Produksi Pangan Olahan yang Baik</p>
+      </div>
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-4xl mb-3">✓</div>
+        <h4 class="font-bold text-blue-800 mb-2">Sertifikasi Halal</h4>
+        <p class="text-sm text-gray-700">Produk halal dan teruji keamanannya</p>
+      </div>
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-4xl mb-3">✓</div>
+        <h4 class="font-bold text-blue-800 mb-2">Sertifikat PIRT</h4>
+        <p class="text-sm text-gray-700">Izin Edar dari dinas kesehatan</p>
+      </div>
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-4xl mb-3">✓</div>
+        <h4 class="font-bold text-blue-800 mb-2">Standar Higienis</h4>
+        <p class="text-sm text-gray-700">Fasilitas berstandar internasional</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impact Section -->
+  <div class="container mx-auto px-4 py-16 lg:py-20">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+      Dampak Factory Sharing
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-8 shadow-lg">
+        <h4 class="text-5xl font-bold mb-4">↑ 250%</h4>
+        <p class="text-lg">Peningkatan Kapasitas Produksi</p>
+        <p class="text-blue-100 mt-2">Dari kapasitas kecil menjadi skala produksi komersial</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-8 shadow-lg">
+        <h4 class="text-5xl font-bold mb-4">↑ 180%</h4>
+        <p class="text-lg">Peningkatan Omzet</p>
+        <p class="text-blue-100 mt-2">Dari penjualan mentah hingga produk olahan</p>
+      </div>
+      <div class="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-lg p-8 shadow-lg">
+        <h4 class="text-5xl font-bold mb-4">50+</h4>
+        <p class="text-lg">Anggota Kelompok Tani</p>
+        <p class="text-blue-100 mt-2">Perempuan tani yang terberdaya dan mandiri</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease-out forwards;
+    }
+  </style>
+</MainLayout>
