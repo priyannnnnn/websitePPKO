@@ -2,120 +2,326 @@
 import MainLayout from '../../layouts/MainLayout.astro';
 
 const metadata = {
-  title: 'Review Produk',
+  title: 'Branding Produk Unggulan Purwobinangun',
 };
 
-const reviews = [
+// Product data for Stik Susu and dairy innovations
+const productData = [
   {
     id: 1,
-    productName: 'Susu Pasteurisasi Premium',
+    name: 'Stik Susu Sapi Premium',
+    category: 'Produk Unggulan',
+    description: 'Camilan bergizi tinggi dengan kandungan susu segar 100% dari peternakan lokal Purwobinangun. Telah mencapai pasar internasional di Malaysia, Thailand, dan Singapura.',
+    highlights: [
+      'Protein: 8g per porsi',
+      'Sertifikasi PIRT & Halal',
+      'Bebas pengawet sintetis',
+      'Kemasan ramah lingkungan'
+    ],
     rating: 5,
-    reviewer: 'Bu Siti Rahayu',
-    date: '15 Oktober 2024',
-    review: 'Produk yang luar biasa! Rasa susu sangat alami dan teksturnya sempurna. Saya merekomendasikan ke semua teman saya.',
-    image: '/susucoklat.png'
+    reviews: 180,
+    image: '/stik.png',
+    international: true,
+    countries: ['Malaysia', 'Thailand', 'Singapura']
   },
   {
     id: 2,
-    productName: 'Stik Susu Cokelat Rasa Original',
-    rating: 5,
-    reviewer: 'Bapak Ahmad Wijaya',
-    date: '12 Oktober 2024',
-    review: 'Camilan favorit anak-anak saya. Enak, sehat, dan terbuat dari bahan alami berkualitas tinggi.',
-    image: '/susumelon.png'
+    name: 'Yogurt Lokal Probiotik',
+    category: 'Urunan Susu',
+    description: 'Yogurt dengan probiotik alami untuk kesehatan pencernaan keluarga. Dibuat dari susu segar pilihan dengan kultur bakteri baik.',
+    highlights: [
+      'Probiotik alami premium',
+      'Tanpa pengawet berbahaya',
+      'Tekstur creamy sempurna',
+      'Rasa alami istimewa'
+    ],
+    rating: 4.95,
+    reviews: 142,
+    image: '/stik1.png',
+    international: false,
+    countries: []
   },
   {
     id: 3,
-    productName: 'Susu Pasteurisasi Premium',
-    rating: 4,
-    reviewer: 'Ibu Maya Putri',
-    date: '10 Oktober 2024',
-    review: 'Sangat baik untuk keluarga. Hanya saja packaging bisa lebih menarik lagi untuk menarik konsumen muda.',
-    image: '/susucoklat.png'
+    name: 'Es Krim Susu Tradisional',
+    category: 'Inovasi Produk',
+    description: 'Es krim premium dengan bahan dasar susu segar murni. Diproduksi dengan standar higienis tinggi tanpa bahan kimia berbahaya.',
+    highlights: [
+      'Bahan alami 100%',
+      'Rasa autentik tradisional',
+      'Tekstur smooth dan creamy',
+      'Bebas MSG dan pengawet'
+    ],
+    rating: 4.8,
+    reviews: 124,
+    image: '/stik2.png',
+    international: false,
+    countries: []
   },
-  {
-    id: 4,
-    productName: 'Yogurt Tradisional Purwobinangun',
-    rating: 5,
-    reviewer: 'Dr. Budi Santoso',
-    date: '08 Oktober 2024',
-    review: 'Kualitas terbaik yang pernah saya coba. Probiotik alami dan tanpa pengawet berbahaya. Sangat sehat!',
-    image: '/susumelon.png'
-  },
-  {
-    id: 5,
-    productName: 'Stik Susu Cokelat Rasa Original',
-    rating: 4,
-    reviewer: 'Sri Lestari',
-    date: '05 Oktober 2024',
-    review: 'Produk berkualitas dari lokal yang bisa bersaing dengan brand nasional. Terus berkembang dan inovasi!',
-    image: '/susucoklat.png'
-  },
-  {
-    id: 6,
-    productName: 'Keju Tradisional Rendah Lemak',
-    rating: 5,
-    reviewer: 'Anita Wijaya',
-    date: '01 Oktober 2024',
-    review: 'Ini adalah keju terbaik yang pernah saya makan. Rasa gurih alami tanpa MSG. Highly recommended!',
-    image: '/susumelon.png'
-  }
+  // {
+  //   id: 4,
+  //   name: 'Susu Pasteurisasi Premium',
+  //   category: 'Produk Utama',
+  //   description: 'Susu segar pasteurisasi dengan teknologi CPPOB terkini dari proses produksi yang higienis dan terstandar internasional.',
+  //   highlights: [
+  //     'Proses pasteurisasi modern',
+  //     'Nutrisi lengkap untuk keluarga',
+  //     'Rasa alami tanpa penambahan',
+  //     'Kemasan higienis premium'
+  //   ],
+  //   rating: 4.9,
+  //   reviews: 156,
+  //   image: '/susumelon.png',
+  //   international: false,
+  //   countries: []
+  // },
+  // {
+  //   id: 5,
+  //   name: 'Keju Rendah Lemak Premium',
+  //   category: 'Inovasi Produk',
+  //   description: 'Keju tradisional dengan teknik pengolahan modern menggunakan standar CPPOB untuk rasa gurih alami tanpa MSG.',
+  //   highlights: [
+  //     'Rasa gurih alami premium',
+  //     'Rendah lemak 30% lebih rendah',
+  //     'Tanpa MSG dan pengawet',
+  //     'Tekstur premium lembut'
+  //   ],
+  //   rating: 4.85,
+  //   reviews: 98,
+  //   image: '/susucoklat.png',
+  //   international: false,
+  //   countries: []
+  // },
+  // {
+  //   id: 6,
+  //   name: 'Minuman Probiotik Alami',
+  //   category: 'Urunan Susu',
+  //   description: 'Minuman probiotik inovatif dengan kultur bakteri baik untuk kesehatan pencernaan, dibuat dari susu lokal berkualitas.',
+  //   highlights: [
+  //     'Probiotik alami terpilih',
+  //     'Tanpa gula berlebihan',
+  //     'Rasa segar dan sehat',
+  //     'Kemasan praktis modern'
+  //   ],
+  //   rating: 4.75,
+  //   reviews: 87,
+  //   image: '/susumelon.png',
+  //   international: false,
+  //   countries: []
+  // }
+];
+
+const stats = [
+  { number: '6', label: 'Produk Unggulan', description: 'Varian olahan susu berkualitas premium' },
+  { number: '3', label: 'Negara', description: 'Stik Susu telah mencapai pasar internasional' },
+  { number: '4.9/5', label: 'Rating', description: 'Kepuasan pelanggan rata-rata' },
+  { number: '587', label: 'Review', description: 'Testimoni positif dari pelanggan' }
 ];
 
 const renderStars = (rating) => {
   return Array.from({ length: 5 }, (_, i) => (
-    i < rating ? '★' : '☆'
+    i < Math.floor(rating) ? '★' : '☆'
   )).join('');
 };
 ---
 
 <MainLayout title={metadata.title}>
-  <!-- Hero Section -->
-  <div class="relative w-full h-[40rem] overflow-hidden">
+  <!-- Updated hero section with new tagline and description about local products reaching world markets -->
+  <div class="relative w-full h-[45rem] overflow-hidden group">
     <img 
-      src="/placeholder.svg?height=640&width=1920"
-      alt="Review Produk"
+      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-11-03%20at%2013.35.24-NPyjxmITaIhW8cW6ufgGW8zQpY1BVP.png"
+      alt="Stik Susu di Pasar Internasional"
       class="w-full h-full object-cover"
-      style="filter: brightness(50%);"
+      style="filter: brightness(45%);"
     />
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-16">
-      <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-6 animate-fadeIn">Review Produk</h1>
-      <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-4xl text-gray-100 animate-fadeIn" style="animation-delay: 0.2s;">
-        Testimoni nyata dari pelanggan tentang kualitas dan kepuasan mereka terhadap produk olahan susu kami yang premium dan terjaga kualitasnya.
-      </p>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-16">
+      <div class="animate-fadeIn">
+        <p class="text-blue-200 text-sm sm:text-base font-semibold uppercase tracking-wider mb-3">Dari Desa Purwobinangun untuk Dunia</p>
+        <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-4 leading-tight">Cita Rasa Lokal yang Mendunia</h1>
+        <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-3xl text-blue-100 mb-6">
+          Berawal dari desa kecil di Purwobinangun, kami membuktikan bahwa cita rasa khas susu lokal mampu menembus batas negara. Melalui kerja sama peternak, inovasi olahan susu, dan semangat wirausaha desa, kini produk kami telah dipercaya hingga ke luar negeri.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+          <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold">
+            ✈️ Telah Mencapai 3 Negara
+          </span>
+          <p class="text-blue-100 text-sm">🥛 Cocok dinikmati kapan saja — terutama saat perjalanan!</p>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Reviews Grid -->
-  <div class="container mx-auto px-4 py-16 lg:py-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {reviews.map((item) => (
-        <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow h-full">
-          <div class="h-48 bg-blue-50 overflow-hidden">
-            <img src={item.image || "/placeholder.svg"} alt={item.productName} class="w-full h-full object-cover" />
+  <!-- Travel-friendly product highlight section -->
+  <div class="bg-gradient-to-r from-blue-50 to-white py-12 lg:py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Ringan, Bergizi, Praktis</h2>
+          <p class="text-gray-600 leading-relaxed">
+            Produk kami dirancang khusus untuk menemani perjalanan, belajar, atau sekadar menikmati waktu santai bersama keluarga. Dengan kandungan nutrisi tinggi dan kemasan modern, Stik Susu dan produk urunan susu kami siap dinikmati di mana pun Anda berada.
+          </p>
+          <div class="pt-4 border-t border-blue-200">
+            <p class="text-sm font-semibold text-blue-700 mb-3">✓ Nutrisi Lengkap</p>
+            <p class="text-sm font-semibold text-blue-700 mb-3">✓ Kemasan Higienis</p>
+            <p class="text-sm font-semibold text-blue-700">✓ Rasa Alami Istimewa</p>
           </div>
-          <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-lg font-semibold text-gray-800 mb-2">
-              {item.productName}
-            </h3>
-            <div class="flex items-center mb-3">
-              <span class="text-yellow-400 text-lg mr-2">
-                {renderStars(item.rating)}
-              </span>
-              <span class="text-gray-600 text-sm">
-                {item.rating}/5 Rating
-              </span>
+        </div>
+        <div class="h-96 bg-blue-100 rounded-lg overflow-hidden shadow-lg">
+          <img src="/stik1.png" alt="Stik Susu" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 1: Cerita Produk - Stik Susu -->
+  <div class="container mx-auto px-4 py-16 lg:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Setiap Stik Membawa Cerita Dedikasi</h2>
+        <div class="space-y-4">
+          <p class="text-gray-700 leading-relaxed">
+            Setiap stik susu membawa cita rasa kemurnian dan dedikasi peternak kami. Dibuat dari susu segar pilihan, diolah secara higienis, dan dikemas modern agar siap dinikmati di mana pun Anda berada.
+          </p>
+          <div class="bg-blue-50 rounded-lg p-6 border-l-4 border-blue-600">
+            <p class="text-lg font-semibold text-gray-800 mb-2">Renyah • Creamy • Penuh Energi</p>
+            <p class="text-gray-600 text-sm">Teman terbaik dalam setiap perjalanan Anda</p>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 font-bold text-xl mt-0">✓</span>
+              <span class="text-gray-700"><strong>100% Susu Segar</strong> dari peternakan lokal Purwobinangun</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 font-bold text-xl mt-0">✓</span>
+              <span class="text-gray-700"><strong>Sertifikasi PIRT & Halal</strong> terpercaya</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-blue-600 font-bold text-xl mt-0">✓</span>
+              <span class="text-gray-700"><strong>Standar Internasional</strong> dalam setiap batch produksi</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="order-1 md:order-2 h-96 bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg overflow-hidden shadow-lg">
+        <img src="/stik.png" alt="Stik Susu Premium" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2: Produk Urunan Susu with innovations -->
+  <div class="bg-gradient-to-r from-blue-50 to-white py-16 lg:py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-8">Inovasi Produk Urunan Susu</h2>
+      <p class="text-gray-600 text-center max-w-2xl mx-auto mb-12">
+        Lebih dari sekadar susu, kami menghadirkan berbagai inovasi yang mencerminkan semangat gotong royong dan inovasi desa
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+          <div class="text-5xl mb-4">🧀</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Yogurt Lokal Probiotik</h3>
+          <p class="text-gray-600 text-sm">Yogurt dengan probiotik alami untuk kesehatan pencernaan keluarga, dibuat dari susu segar berkualitas.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+          <div class="text-5xl mb-4">🍦</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Es Krim Susu Tradisional</h3>
+          <p class="text-gray-600 text-sm">Es krim premium dengan bahan dasar susu segar murni, diproses dengan standar higienis tinggi.</p>
+        </div>
+        <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+          <div class="text-5xl mb-4">🥤</div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Minuman Probiotik Alami</h3>
+          <p class="text-gray-600 text-sm">Minuman inovatif dengan kultur bakteri baik untuk kesehatan, dibuat dari susu lokal berkualitas.</p>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg p-8 border-2 border-blue-200 text-center">
+        <p class="text-xl font-semibold text-gray-800 mb-2">Temani langkah Anda dengan rasa alami dari Purwobinangun</p>
+        <p class="text-gray-600">Setiap produk terbuat dari bahan lokal berkualitas yang mencerminkan semangat gotong royong dan inovasi desa</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="bg-blue-50 py-12 lg:py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-12">Pencapaian Program</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {stats.map((stat) => (
+          <div class="bg-white rounded-lg p-8 text-center shadow-md hover:shadow-lg transition-shadow">
+            <div class="text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
+            <h3 class="text-lg font-semibold text-gray-800 mb-2">{stat.label}</h3>
+            <p class="text-sm text-gray-600">{stat.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 3: Jangkauan Global -->
+  <div class="container mx-auto px-4 py-16 lg:py-20">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Jangkauan Global: Dari Desa ke Dunia</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+        Kini produk kami telah dipercaya hingga ke luar negeri. Kami bangga membawa cita rasa Purwobinangun ke pasar nasional dan internasional — menjadi bukti bahwa inovasi desa mampu bersaing di kancah global.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {productData.map((product) => (
+        <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all h-full border border-gray-100">
+          <div class="relative h-56 bg-gradient-to-br from-blue-50 to-blue-100 overflow-hidden">
+            <img 
+              src={product.image || "/placeholder.svg"} 
+              alt={product.name} 
+              class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+            />
+            {product.international && (
+              <div class="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">
+                🌍 Internasional
+              </div>
+            )}
+            <div class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+              {product.category}
             </div>
-            <p class="text-gray-700 mb-4 flex-grow italic">
-              "{item.review}"
-            </p>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">{product.description}</p>
+
+            <div class="mb-4 p-3 bg-blue-50 rounded-lg flex-grow">
+              <p class="text-xs font-semibold text-blue-900 mb-2">Keunggulan:</p>
+              <ul class="text-xs text-gray-700 space-y-1">
+                {product.highlights.map((highlight) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-blue-600 mt-0.5">✓</span>
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             <div class="pt-4 border-t border-gray-200">
-              <p class="text-sm font-semibold text-gray-800">
-                {item.reviewer}
-              </p>
-              <p class="text-xs text-gray-500">
-                {item.date}
-              </p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="text-yellow-400 text-lg">{renderStars(product.rating)}</span>
+                  <span class="text-sm font-semibold text-gray-800">{product.rating.toFixed(1)}/5</span>
+                </div>
+                <span class="text-xs text-gray-500">{product.reviews} review</span>
+              </div>
+              
+              {product.international && product.countries.length > 0 && (
+                <div class="pt-3 border-t border-gray-200 mt-3">
+                  <p class="text-xs font-semibold text-gray-700 mb-2">Tersedia di:</p>
+                  <div class="flex flex-wrap gap-2">
+                    {product.countries.map((country) => (
+                      <span class="inline-block bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs font-medium">
+                        {country}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -123,21 +329,43 @@ const renderStars = (rating) => {
     </div>
   </div>
 
-  <!-- Summary Section -->
-  <div class="container mx-auto px-4 py-16 lg:py-20 bg-blue-50">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-      <div class="p-6">
-        <h4 class="text-4xl font-bold text-blue-600 mb-2">4.8/5</h4>
-        <p class="text-gray-700">Rating Rata-rata</p>
+  <!-- Certification Section -->
+  <div class="container mx-auto px-4 py-16 lg:py-20 bg-gradient-to-r from-blue-50 to-blue-100 my-16 rounded-lg">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Standar Kualitas & Sertifikasi Internasional</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-5xl mb-3">🏭</div>
+        <h4 class="font-semibold text-gray-800 mb-2">CPPOB</h4>
+        <p class="text-xs text-gray-600">Cara Produksi Pangan Olahan Baik</p>
       </div>
-      <div class="p-6">
-        <h4 class="text-4xl font-bold text-blue-600 mb-2">250+</h4>
-        <p class="text-gray-700">Pelanggan Puas</p>
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-5xl mb-3">✅</div>
+        <h4 class="font-semibold text-gray-800 mb-2">PIRT</h4>
+        <p class="text-xs text-gray-600">Produk Industri Rumah Tangga</p>
       </div>
-      <div class="p-6">
-        <h4 class="text-4xl font-bold text-blue-600 mb-2">6</h4>
-        <p class="text-gray-700">Variasi Produk</p>
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-5xl mb-3">🌙</div>
+        <h4 class="font-semibold text-gray-800 mb-2">HALAL</h4>
+        <p class="text-xs text-gray-600">Sertifikasi Halal MUI</p>
       </div>
+      <div class="bg-white rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
+        <div class="text-5xl mb-3">🧪</div>
+        <h4 class="font-semibold text-gray-800 mb-2">LAB TEST</h4>
+        <p class="text-xs text-gray-600">Uji Lab Berkala Terulis</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="bg-blue-600 text-white py-16 lg:py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Bergabunglah dengan Ribuan Pelanggan Puas</h2>
+      <p class="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+        Rasakan kualitas produk olahan susu premium dari Purwobinangun yang telah terbukti kompetitif hingga pasar internasional
+      </p>
+      <button class="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+        Pesan Sekarang
+      </button>
     </div>
   </div>
 

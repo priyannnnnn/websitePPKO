@@ -9,16 +9,23 @@ const metadata = {
 <MainLayout title={metadata.title}>
   <!-- Hero Section -->
   <div class="relative w-full h-[40rem] overflow-hidden">
-    <img 
-      src="/placeholder.svg?height=640&width=1920"
-      alt="Artikel"
+    <!-- Replaced static image with video element -->
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline
       class="w-full h-full object-cover"
-      style="filter: brightness(50%);"
-    />
+      style="filter: brightness(80%);"
+    >
+      <!-- <source src="/video.mp4" type="video/mp4"> -->
+      <source src="/vidio.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70 flex flex-col items-start justify-end p-6 sm:p-10 lg:p-16">
       <h1 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-left mb-6 animate-fadeIn">Artikel</h1>
       <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-left max-w-4xl text-gray-100 animate-fadeIn" style="animation-delay: 0.2s;">
-        Berisi kumpulan artikel dari PPKO Labma UII yang telah dipublikasikan di berbagai platform akademis dan media massa. Artikel-artikel ini mencakup topik pemberdayaan perempuan tani, inovasi pengolahan susu, serta pengembangan usaha berbasis komunitas di Desa Purwobinangun.
+        Berisi kumpulan artikel dari PPK Ormawa Sinera UII yang telah dipublikasikan di berbagai platform akademis dan media massa. Artikel-artikel ini mencakup topik pemberdayaan perempuan tani, inovasi pengolahan susu, serta pengembangan usaha berbasis komunitas di Desa Purwobinangun.
       </p>
     </div>
   </div>
@@ -28,14 +35,14 @@ const metadata = {
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Article Card 1 -->
       <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-        <img src="/placeholder.svg?height=300&width=500" alt="Sekolah Perempuan Tani" class="w-full h-56 object-cover">
+        <img src="/bolu.png?height=300&width=500" alt="Sekolah Perempuan Tani" class="w-full h-56 object-cover">
         <div class="p-6 flex-1 flex flex-col">
-          <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-3 w-fit">Kompasiana</span>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tim PPKO LabMa UII Gelar Sekolah Perempuan Tani Guna Pengembangan Sentra Produk Lokal</h2>
+          <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-3 w-fit">UII</span>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Mahasiswa UII Dorong Ekonomi Desa Lewat Pelatihan CPPOB dan Bolu Susu</h2>
           <p class="text-gray-700 mb-6 flex-grow">
-            Tim PPKO Labma UII mengadakan Sekolah Perempuan Tani untuk mendorong pengembangan produk lokal di Desa Purwobinangun dengan pelatihan intensif dan berkelanjutan.
+            Tim PPK Ormawa Sinera Universitas Islam Indonesia (UII) terus menunjukkan komitmennya dalam memberdayakan masyarakat melalui inovasi di sektor olahan susu
           </p>
-          <a href="https://www.kompasiana.com/yustikaedhowicaksono1951/66ae3a36c925c446e37a6712/" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition duration-300">
+          <a href="https://www.uii.ac.id/mahasiswa-uii-dorong-ekonomi-desa-lewat-pelatihan-cppob-dan-bolu-susu/" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition duration-300">
             Baca Selengkapnya
           </a>
         </div>
@@ -43,21 +50,21 @@ const metadata = {
 
       <!-- Article Card 2 -->
       <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-        <img src="/placeholder.svg?height=300&width=500" alt="KWT Dusun Kemiri" class="w-full h-56 object-cover">
+        <img src="/beranda2.jpg?height=300&width=500" alt="KWT Dusun Kemiri" class="w-full h-56 object-cover">
         <div class="p-6 flex-1 flex flex-col">
-          <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-3 w-fit">Your Say</span>
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Berdayakan KWT, Tim PPKO Ormawa Labma UII Gelar Sekolah Perempuan Tani di Dusun Kemiri</h2>
+          <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-3 w-fit">Pondok Pesantren UII</span>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Tim PPK Ormawa Sinera UII Lolos Pendanaan untuk Wujudkan Desa Wirausaha Olahan Susu di Purwobinangun</h2>
           <p class="text-gray-700 mb-6 flex-grow">
-            Kegiatan ini bertujuan untuk memberdayakan kelompok wanita tani (KWT) dan mendorong produktivitas usaha di wilayah Dusun Kemiri melalui pelatihan terstruktur.
+            PPK Ormawa Sinera UII berhasil lolos pendanaan Program Penguatan Kapasitas Organisasi Kemahasiswaan (PPK Ormawa) tahun 2025, dengan proposal bertajuk “Purwobinangun Dairypreneur Village: Sentra Olahan Susu Terstandar Berbasis Factory Sharing untuk Penguatan Desa Wirausaha.”
           </p>
-          <a href="https://yoursay.suara.com/news/2024/08/12/133020/" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition duration-300">
+          <a href="https://pesantren.uii.ac.id/tim-ppk-ormawa-sinera-uii-lolos-pendanaan-untuk-wujudkan-desa-wirausaha-olahan-susu-di-purwobinangun/" target="_blank" class="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg text-center hover:bg-blue-700 transition duration-300">
             Baca Selengkapnya
           </a>
         </div>
       </div>
 
       <!-- Article Card 3 -->
-      <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+      <!-- <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
         <img src="/placeholder.svg?height=300&width=500" alt="Pendanaan PPK Ormawa" class="w-full h-56 object-cover">
         <div class="p-6 flex-1 flex flex-col">
           <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-3 w-fit">UII.ac.id</span>
@@ -69,10 +76,10 @@ const metadata = {
             Baca Selengkapnya
           </a>
         </div>
-      </div>
+      </div> -->
 
       <!-- Article Card 4 -->
-      <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+      <!-- <div class="flex flex-col bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
         <img src="/placeholder.svg?height=300&width=500" alt="Artikel Ilmiah" class="w-full h-56 object-cover">
         <div class="p-6 flex-1 flex flex-col">
           <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mb-3 w-fit">Google Scholar</span>
@@ -84,7 +91,7 @@ const metadata = {
             Baca Selengkapnya
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
